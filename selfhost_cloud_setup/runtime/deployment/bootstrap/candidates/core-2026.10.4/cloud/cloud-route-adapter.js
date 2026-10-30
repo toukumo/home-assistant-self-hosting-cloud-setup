@@ -50,9 +50,14 @@ function overview(host) {
   // Native HA combines Alexa and Google in one row. Keep its original icon,
   // navigation and layout; change only the two bound labels to Google status.
   text(row.querySelector('[slot="headline"]'), 'Google Assistant');
-  const key = host.cloudStatus?.google_registered ? 'alexa_google_google' : 'alexa_google_none';
+  const labels = {
+    en: ['Google Assistant not connected', 'Google Assistant connected'],
+    ko: ['Google Assistant 연결 안 됨', 'Google Assistant 연결됨'],
+    ja: ['Google Assistant 未接続', 'Google Assistant 接続済み'],
+  };
+  const language = (host.hass?.locale?.language || host.hass?.language || 'en').split('-')[0];
   text(row.querySelector('[slot="supporting-text"]'),
-    localize?.(`ui.panel.config.cloud.account.overview.${key}`));
+    (labels[language] || labels.en)[host.cloudStatus?.google_registered ? 1 : 0]);
 }
 
 function assistants(host) {
