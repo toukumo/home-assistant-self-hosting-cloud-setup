@@ -24,6 +24,7 @@ function text(span, value) {
 function overview(host) {
   const root = host.shadowRoot;
   if (!root) return;
+  providerCopy(host);
   if (host.parentNode) style(host.parentNode, 'cloud-account-onboarding { display:none!important; }');
   style(root, `
     /* This card is the official paid-service funding/renewal summary only. */
@@ -104,3 +105,26 @@ function adapt(name, update) {
 
 adapt('cloud-account-overview', overview);
 adapt('ha-config-voice-assistants-assistants', assistants);
+
+// Exact native Japanese copy only; preserve Lit anchors and all controls.
+const selfHostedCopy = new Map([
+  ['Nabu Casa アカウント', 'セルフホスティング Cloud アカウント'],
+  ['このページでリモート アクセスを無効にした場合、この設定を有効にすると、Nabu Casa アカウントを介してリモートで再アクティブ化できるようになります。', 'この設定は、ローカルで無効にしたリモートアクセスの外部からの再有効化を許可します。セルフホスティングサーバー側の対応も必要です。'],
+  ['Home Assistant Cloud に、暗号化された Home Assistant のバックアップを保存するオプションがあります。この機能は、サブスクリプションに含まれており、追加料金はかかりません。', 'セルフホスティング Cloud に、暗号化された Home Assistant のバックアップを保存できます。保存先と利用可能な容量は、サーバーの構成によって異なります。'],
+  ['Nabu Casaは、あなたのデータや暗号化キーにアクセスすることはできません。', 'バックアップの復元に必要な暗号化キーを、安全な場所に保管してください。'],
+  ['Home Assistant アプリを設定すると、Webhook が自動的に登録されます。クラウドサブスクリプションをご利用の場合、これは「クラウドフック」となり、Home Assistant Cloud 上でホストされる一意のシークレット URL となります。', 'Home Assistant アプリを設定すると、Webhook が自動的に登録されます。セルフホスティング Cloud のクラウドフックは、サーバー上の一意のシークレット URL を使用します。URL は秘密情報として扱ってください。'],
+]);
+function providerCopy(host) {
+  function visit(node) {
+    if (node.nodeType === 3) {
+      const replacement = selfHostedCopy.get(node.data.trim());
+      if (replacement) node.data = node.data.replace(node.data.trim(), replacement);
+    } else if (!['SCRIPT', 'STYLE'].includes(node.nodeName)) {
+      for (const child of node.childNodes || []) visit(child);
+    }
+  }
+  if (host.shadowRoot) visit(host.shadowRoot);
+}
+for (const name of ['cloud-remote-pref', 'cloud-backup-pref', 'cloud-companion-pref']) {
+  adapt(name, providerCopy);
+}
