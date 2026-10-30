@@ -24,6 +24,7 @@ function text(span, value) {
 function overview(host) {
   const root = host.shadowRoot;
   if (!root) return;
+  if (host.parentNode) style(host.parentNode, 'cloud-account-onboarding { display:none!important; }');
   style(root, `
     /* This card is the official paid-service funding/renewal summary only. */
     .summary-card,
