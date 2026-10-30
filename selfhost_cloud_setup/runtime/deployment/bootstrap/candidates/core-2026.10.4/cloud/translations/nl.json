@@ -1,0 +1,85 @@
+{
+    "exceptions": {
+        "backup_size_too_large": {
+            "message": "De back-up van {size} GB is te groot om te uploaden naar de Home Assistant Cloud."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "title": "Geen verbinding"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "De `{deprecated_option}` optie voor tekst-naar-spraak in de {integration_name} integratie is verouderd en wordt verwijderd.\nWerk je automatiseringen en scripts bij om de `{deprecated_option}` optie te vervangen door een optie voor een ondersteunde `{replacement_option}`.",
+                        "title": "Er is een verouderde stem gebruikt"
+                    }
+                }
+            },
+            "title": "De tekst-naar-spraak-optie {deprecated_option} is verouderd"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Het hele `platform: cloud` item onder de `tts:` sectie in configuration.yaml is verouderd en moet worden verwijderd. Je kunt de UI gebruiken om de instellingen voor het Cloud tekst-naar-spraak platform te wijzigen. Pas je configuration.yaml aan en herstart Home Assistant om dit probleem op te lossen.",
+            "title": "De Cloud tekst-naar-spraak platformconfiguratie is verouderd"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "De stem `{deprecated_voice}` is verouderd en wordt verwijderd. Werk je automatiseringen en scripts bij om `{deprecated_voice}` te vervangen door een andere stem, bijvoorbeeld `{replacement_voice}`.",
+                        "title": "Er is een verouderde stem gebruikt"
+                    }
+                }
+            },
+            "title": "Er is een verouderde stem gebruikt"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "De bewerking duurde te lang. Probeer het later opnieuw."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "We hebben onlangs ons abonnementssysteem bijgewerkt. Om Home Assistant Cloud te kunnen blijven gebruiken, moet je de wijziging eenmalig goedkeuren via PayPal.\n\nDit duurt 1 minuut en zal de prijs niet verhogen."
+                    }
+                }
+            },
+            "title": "Legacy-abonnement gedetecteerd"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "De DNS-configuratie voor je aangepaste domein ({custom_domains}) is niet correct. Dit domein wordt nu genegeerd en zal niet worden gebruikt voor Home Assistant Cloud. Als je dit domein wilt gebruiken, herstel dan de DNS-configuratie en start Home Assistant opnieuw op. Als je dit niet meer nodig hebt, kun je het verwijderen van de accountpagina.",
+            "title": "Aangepast domein genegeerd"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "De DNS-configuratie voor je aangepaste domein ({custom_domains}) is niet correct. Controleer de DNS-configuratie van het domein en zorg ervoor dat deze naar de juiste CNAME verwijst.",
+            "title": "Verkeerde configuratie van aangepaste domeinen gedetecteerd"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Zet een verbinding op tussen de gebruikersinterface en Home Assistant Cloud. Hierdoor wordt de toegang van buiten je lokale netwerk ingeschakeld."
+        },
+        "remote_disconnect": {
+            "description": "Verbreekt de verbinding tussen de gebruikersinterface en Home Assistant Cloud. Hierdoor wordt de toegang van buiten je lokale netwerk uitgeschakeld."
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa ingeschakeld",
+            "can_reach_cert_server": "Certificaatserver bereikbaar",
+            "can_reach_cloud": "Home Assistant Cloud bereikbaar",
+            "can_reach_cloud_auth": "Authenticatieserver bereikbaar",
+            "certificate_status": "Certificaatstatus",
+            "google_enabled": "Google ingeschakeld",
+            "instance_id": "Instantie-ID",
+            "logged_in": "Ingelogd",
+            "relayer_connected": "Relayer verbonden",
+            "relayer_region": "Relayer-regio",
+            "remote_connected": "Op afstand verbonden",
+            "remote_enabled": "Op afstand ingeschakeld",
+            "remote_server": "Externe server",
+            "subscription_expiration": "Afloop abonnement"
+        }
+    }
+}

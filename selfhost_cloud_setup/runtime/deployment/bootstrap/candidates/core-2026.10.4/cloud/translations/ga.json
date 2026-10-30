@@ -1,0 +1,120 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "C\u00fant\u00f3ir Baile Cloud AI"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "N\u00edorbh fh\u00e9idir teacht ar Home Assistant Cloud chun do sh\u00edni\u00fa isteach a chr\u00edochn\u00fa. D\u00e9an iarracht ar\u00eds \u00e9 a sh\u00edni\u00fa isteach."
+        },
+        "auto_login_failed_timeout": {
+            "message": "N\u00edor deimhn\u00edodh do sheoladh r\u00edomhphoist in am, mar sin stopamar ag fanacht. Crutha\u00edodh do chuntas, mar sin deimhnigh do sheoladh r\u00edomhphoist agus s\u00ednigh isteach le do thoil."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "Chuir earr\u00e1id gan choinne bac orainn t\u00fa a sh\u00edni\u00fa isteach. D\u00e9an iarracht ar\u00eds s\u00edni\u00fa isteach."
+        },
+        "backup_size_too_large": {
+            "message": "T\u00e1 an m\u00e9id c\u00faltaca de {size}GB r\u00f3mh\u00f3r le huasl\u00f3d\u00e1il chuig Home Assistant Cloud."
+        },
+        "no_pending_auto_login": {
+            "message": "N\u00edl aon chl\u00e1r\u00fa le d\u00e9anamh ag fanacht le deimhni\u00fa r\u00edomhphoist."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "N\u00edl nasc agat le Home Assistant Cloud. Seice\u00e1il do l\u00edonra.",
+            "title": "Gan nasc"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "T\u00e1 an rogha `{deprecated_option}` le haghaidh t\u00e9acs-go-hurlabhra sa chomhth\u00e1th\u00fa {integration_name} imithe i l\u00e9ig agus bainfear \u00ed.\nNuashonraigh do uathoibrithe agus scripteanna le do thoil chun an rogha `{deprecated_option}` a athshol\u00e1thar le rogha le haghaidh `{replacement_option}` tacaithe ina ionad.",
+                        "title": "\u00das\u00e1ideadh guth at\u00e1 as feidhm"
+                    }
+                }
+            },
+            "title": "T\u00e1 an rogha t\u00e9acs-go-hurlabhra {deprecated_option} imithe i l\u00e9ig"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "T\u00e1 an iontr\u00e1il `platform: cloud` faoin rann\u00e1n `tts:` i configuration.yaml imithe i l\u00e9ig agus ba ch\u00f3ir \u00ed a bhaint. Is f\u00e9idir leat an comh\u00e9adan \u00fas\u00e1ideora a \u00fas\u00e1id chun socruithe a athr\u00fa don ard\u00e1n t\u00e9acs-go-hurlabhra Cloud. Coigeartaigh do configuration.yaml agus atos\u00fa Home Assistant chun an fhadhb seo a r\u00e9iteach.",
+            "title": "T\u00e1 cumra\u00edocht an ard\u00e1in t\u00e9acs-go-hurlabhra Cloud imithe i l\u00e9ig"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "T\u00e1 an guth `{deprecated_voice}` imithe i l\u00e9ig agus bainfear \u00e9.\nNuashonraigh do uathoibrithe agus scripteanna le do thoil chun an `{deprecated_voice}` a athshol\u00e1thar le guth eile cos\u00fail le `{replacement_voice}`.",
+                        "title": "\u00das\u00e1ideadh guth at\u00e1 as feidhm"
+                    }
+                }
+            },
+            "title": "\u00das\u00e1ideadh guth at\u00e1 as feidhm"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Th\u00f3g an oibr\u00edocht r\u00f3-fhada. D\u00e9an iarracht ar\u00eds ar ball."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Le d\u00e9ana\u00ed, rinneamar nuashonr\u00fa ar \u00e1r gc\u00f3ras s\u00ednti\u00fais. Chun lean\u00faint ar aghaidh ag \u00fas\u00e1id Home Assistant Cloud n\u00ed m\u00f3r duit an t-athr\u00fa a chead\u00fa aonuaire i PayPal.\n\nT\u00f3gann s\u00e9 seo n\u00f3im\u00e9ad amh\u00e1in agus n\u00ed mh\u00e9ad\u00f3idh s\u00e9 an praghas."
+                    }
+                }
+            },
+            "title": "Sean-s\u00ednti\u00fas braite"
+        },
+        "no_subscription": {
+            "description": "N\u00edl s\u00ednti\u00fas Home Assistant Cloud agat. Liost\u00e1il ag {account_url}.",
+            "title": "N\u00edor braitheadh aon s\u00ednti\u00fas"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "N\u00edl an chumra\u00edocht DNS do do fhearann saincheaptha ({custom_domains}) ceart. T\u00e1 neamhaird d\u00e9anta den fhearann seo anois agus n\u00ed \u00fas\u00e1idfear \u00e9 le haghaidh Home Assistant Cloud. M\u00e1s mian leat an fearann seo a \u00fas\u00e1id, socraigh an chumra\u00edocht DNS agus atos\u00fa Home Assistant. Mura bhfuil s\u00e9 seo uait a thuilleadh, is f\u00e9idir leat \u00e9 a bhaint den leathanach cuntais.",
+            "title": "Fearann saincheaptha neamhaird"
+        },
+        "subscription_expired": {
+            "description": "T\u00e1 do sh\u00ednti\u00fas Home Assistant Cloud imithe in \u00e9ag. Athliost\u00e1il ag {account_url}.",
+            "title": "T\u00e1 an s\u00ednti\u00fas imithe in \u00e9ag"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "N\u00edl cumra\u00edocht DNS do d'fhearann saincheaptha ({custom_domains}) ceart. Seice\u00e1il cumra\u00edocht DNS d'fhearann agus d\u00e9an cinnte go bhfuil s\u00ed ag pointe\u00e1il chuig an CNAME ceart.",
+            "title": "Braitheadh cumra\u00edocht fearainn saincheaptha m\u00edcheart"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "T\u00e1imid ag t\u00e1st\u00e1il inneall nua urlabhra-go-t\u00e9acs do Home Assistant Cloud, an chuid den rial\u00fa gutha a athra\u00edonn an rud a deir t\u00fa ina fhocail. In\u00e1r dt\u00e1st\u00e1il, d\u00e9ile\u00e1lann s\u00e9 n\u00edos fearr le blasanna, torann c\u00falra, agus teangacha seachas B\u00e9arla.\n\nC\u00e9 go bhfuil s\u00e9 seo cumasaithe, d\u00e9anann [Soniox](https://soniox.com/) aon fhuaim \u00f3 d\u2019orduithe gutha a phr\u00f3ise\u00e1il seachas \u00e1r sol\u00e1thra\u00ed reatha. N\u00ed bhaineann s\u00e9 seo ach le C\u00fant\u00f3ir\u00ed at\u00e1 cumraithe chun Home Assistant Cloud a \u00fas\u00e1id mar inneall STT. Taisteala\u00edonn s\u00e9 tr\u00ed sheachfhreastala\u00ed Nabu Casa, a l\u00e1imhse\u00e1lann f\u00edordheimhni\u00fa agus a sheolann ar aghaidh chuig an r\u00e9igi\u00fan pr\u00f3ise\u00e1la is gaire duit \u00e9. N\u00ed phr\u00f3ise\u00e1lann, n\u00ed st\u00f3r\u00e1lann n\u00e1 n\u00ed log\u00e1lann Nabu Casa d\u2019fhuaim ag aon phointe. Fanann gach rud eile faoi do ph\u00edbl\u00edne gutha mar a ch\u00e9ile, agus is f\u00e9idir leat \u00e9 seo a mh\u00fachadh ar\u00eds ag am ar bith.",
+            "disable_confirmation": "Aon Ch\u00fant\u00f3ir at\u00e1 ag baint \u00fas\u00e1ide as an inneall nua faoi l\u00e1thair, rachaidh s\u00e9 ar ais chuig a thras-scr\u00edobh ag \u00e1r sol\u00e1thra\u00ed urlabhra-go-t\u00e9acs reatha.",
+            "enable_confirmation": "T\u00e1 an ghn\u00e9 seo f\u00f3s \u00e1 forbairt agus d'fh\u00e9adfadh s\u00ed athr\u00fa. C\u00e9 go bhfuil s\u00ed cumasaithe, d\u00e9anann Soniox trascr\u00edobh ar fhuaim \u00f3 d'orduithe gutha i dteangacha tacaithe seachas ar \u00e1r sol\u00e1thra\u00ed reatha."
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "D\u00e9anann s\u00e9 seo rochtain ar chomh\u00e9adan \u00fas\u00e1ideora an ch\u00e1is \u00f3 lasmuigh den l\u00edonra \u00e1iti\u00fail tr\u00ed do nasc Home Assistant Cloud a chumas\u00fa."
+        },
+        "remote_disconnect": {
+            "description": "D\u00edcheangla\u00edonn s\u00e9 seo an comh\u00e9adan \u00fas\u00e1ideora samplach \u00f3 Home Assistant Cloud. D\u00edchumasa\u00edonn s\u00e9 seo rochtain air \u00f3 lasmuigh de do l\u00edonra \u00e1iti\u00fail."
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa cumasaithe",
+            "can_reach_cert_server": "Sroich freastala\u00ed teastais",
+            "can_reach_cloud": "Reach Home Assistant Cloud",
+            "can_reach_cloud_auth": "Sroich an freastala\u00ed f\u00edordheimhnithe",
+            "certificate_status": "St\u00e1das an deimhnithe",
+            "google_enabled": "Google cumasaithe",
+            "instance_id": "Aitheantas an Ch\u00e1is",
+            "logged_in": "Log\u00e1ilte Isteach",
+            "relayer_connected": "Athsheolt\u00f3ir ceangailte",
+            "relayer_region": "R\u00e9igi\u00fan athsheolt\u00f3ra",
+            "remote_connected": "Ceangailte iarg\u00falta",
+            "remote_enabled": "Cumasaithe cianda",
+            "remote_server": "Freastala\u00ed cianda",
+            "subscription_expiration": "\u00c9aga an ts\u00ednti\u00fais"
+        }
+    }
+}

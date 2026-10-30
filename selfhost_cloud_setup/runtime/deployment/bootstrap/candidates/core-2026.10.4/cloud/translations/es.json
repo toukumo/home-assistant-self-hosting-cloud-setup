@@ -1,0 +1,123 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Assistant Cloud AI"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "No se ha podido contactar con Home Assistant Cloud para finalizar el inicio de sesi\u00f3n. Por favor, intenta iniciar sesi\u00f3n de nuevo."
+        },
+        "auto_login_failed_timeout": {
+            "message": "Tu correo electr\u00f3nico no se confirm\u00f3 a tiempo, por lo que dejamos de esperar. Tu cuenta ha sido creada, as\u00ed que, por favor, confirma tu correo e inicia sesi\u00f3n."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "Un error inesperado ha impedido iniciar sesi\u00f3n. Por favor, intenta iniciar sesi\u00f3n de nuevo."
+        },
+        "backup_size_too_large": {
+            "message": "El tama\u00f1o de la copia de seguridad de {size}GB es demasiado grande para subirla a Home Assistant Cloud."
+        },
+        "no_pending_auto_login": {
+            "message": "No hay ning\u00fan registro pendiente de confirmaci\u00f3n por correo electr\u00f3nico."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "No tienes conexi\u00f3n a Home Assistant Cloud. Comprueba tu red.",
+            "title": "Sin conexi\u00f3n"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "La opci\u00f3n `{deprecated_option}` para conversi\u00f3n de texto a voz en la integraci\u00f3n {integration_name} est\u00e1 obsoleta y se eliminar\u00e1.\nPor favor, actualiza tus automatizaciones y scripts para reemplazar la opci\u00f3n `{deprecated_option}` con una opci\u00f3n compatible de `{replacement_option}`.",
+                        "title": "Se ha utilizado una voz obsoleta"
+                    }
+                }
+            },
+            "title": "La opci\u00f3n de conversi\u00f3n de texto a voz {deprecated_option} est\u00e1 obsoleta"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Toda la entrada `platform: cloud` en la secci\u00f3n `tts:` en configuraci\u00f3n.yaml est\u00e1 obsoleta y debe eliminarse. Puedes utilizar la IU para cambiar la configuraci\u00f3n de la plataforma de texto a voz en la nube.  Por favor, ajusta tu configuraci\u00f3n.yaml y reinicia Home Assistant para solucionar este problema.",
+            "title": "La configuraci\u00f3n de la plataforma de texto a voz en la nube est\u00e1 obsoleta"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "La voz `{deprecated_voice}` est\u00e1 obsoleta y se eliminar\u00e1.\nPor favor, actualiza tus automatizaciones y scripts para reemplazar `{deprecated_voice}` con otra voz como, por ejemplo, `{replacement_voice}`.",
+                        "title": "Se ha utilizado una voz obsoleta"
+                    }
+                }
+            },
+            "title": "Se ha utilizado una voz obsoleta"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "La operaci\u00f3n ha tardado demasiado. Por favor, int\u00e9ntalo de nuevo m\u00e1s tarde."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Recientemente hemos actualizado nuestro sistema de suscripci\u00f3n. Para continuar usando Home Assistant Cloud, debes aprobar el cambio una sola vez en PayPal. \n\nEsto toma 1 minuto y no aumentar\u00e1 el precio."
+                    }
+                }
+            },
+            "title": "Suscripci\u00f3n heredada detectada"
+        },
+        "no_subscription": {
+            "description": "No tienes una suscripci\u00f3n a Home Assistant Cloud. Suscr\u00edbete en {account_url}.",
+            "title": "No se detect\u00f3 ninguna suscripci\u00f3n"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "La configuraci\u00f3n de DNS para tu dominio personalizado ({custom_domains}) no es correcta. Este dominio ahora ha sido ignorado y no se utilizar\u00e1 para Home Assistant Cloud. Si quieres utilizar este dominio, por favor, corrige la configuraci\u00f3n de DNS y reinicia Home Assistant. Si ya no lo necesitas, puedes eliminarlo de la p\u00e1gina de la cuenta.",
+            "title": "Dominio personalizado ignorado"
+        },
+        "subscription_expired": {
+            "description": "Tu suscripci\u00f3n a Home Assistant Cloud ha caducado. Vuelve a suscribirte en {account_url}.",
+            "title": "La suscripci\u00f3n ha caducado"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "La configuraci\u00f3n DNS de tu dominio personalizado ({custom_domains}) no es correcta. Por favor, comprueba la configuraci\u00f3n DNS de tu dominio y aseg\u00farate de que apunta al CNAME correcto.",
+            "title": "Se ha detectado una configuraci\u00f3n incorrecta del dominio personalizado"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Estamos probando un nuevo motor de conversi\u00f3n de voz a texto para Home Assistant Cloud, la parte del control por voz que convierte lo que dices en palabras. En nuestras pruebas, funciona mejor con acentos, ruido de fondo e idiomas distintos del ingl\u00e9s.\n\nMientras esta funci\u00f3n est\u00e9 activada, el audio de tus comandos de voz ser\u00e1 procesado por [Soniox](https://soniox.com/) en lugar de nuestro proveedor actual. Esto solo aplica a los Asistentes configurados para usar Home Assistant Cloud como motor STT. El audio se transmite a trav\u00e9s de un proxy de Nabu Casa, que gestiona la autenticaci\u00f3n y lo reenv\u00eda a la regi\u00f3n de procesamiento m\u00e1s cercana a ti. Nabu Casa no procesa, almacena ni registra tu audio en ning\u00fan momento. El resto de la configuraci\u00f3n de tu sistema de voz permanece igual, y puedes desactivar esta funci\u00f3n cuando quieras.",
+            "disable_confirmation": "Cualquier asistente que actualmente utilice el nuevo motor volver\u00e1 a ser transcrito por nuestro proveedor actual de conversi\u00f3n de voz a texto.",
+            "enable_confirmation": "Esta funci\u00f3n a\u00fan est\u00e1 en desarrollo y podr\u00eda sufrir cambios. Mientras est\u00e9 activada, el audio de tus comandos de voz en los idiomas compatibles ser\u00e1 transcrito por Soniox en lugar de nuestro proveedor actual.",
+            "name": "Nuevo motor de conversi\u00f3n de voz a texto"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Hace que la IU de la instancia sea accesible desde fuera de la red local al habilitar tu conexi\u00f3n a Home Assistant Cloud.",
+            "name": "Habilitar el acceso remoto a Home Assistant Cloud"
+        },
+        "remote_disconnect": {
+            "description": "Desconecta la interfaz de usuario de la instancia de Home Assistant Cloud. Esto deshabilita el acceso a ella desde fuera de la red local.",
+            "name": "Deshabilitar el acceso remoto a Home Assistant Cloud"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa habilitada",
+            "can_reach_cert_server": "Llega al servidor de certificados",
+            "can_reach_cloud": "Se llega a Home Assistant Cloud",
+            "can_reach_cloud_auth": "Llega al servidor de autenticaci\u00f3n",
+            "certificate_status": "Estado del certificado",
+            "google_enabled": "Google habilitado",
+            "instance_id": "ID de instancia",
+            "logged_in": "Sesi\u00f3n iniciada",
+            "relayer_connected": "Retransmisor conectado",
+            "relayer_region": "Regi\u00f3n del repetidor",
+            "remote_connected": "Remoto conectado",
+            "remote_enabled": "Remoto habilitado",
+            "remote_server": "Servidor remoto",
+            "subscription_expiration": "Caducidad de la suscripci\u00f3n"
+        }
+    }
+}

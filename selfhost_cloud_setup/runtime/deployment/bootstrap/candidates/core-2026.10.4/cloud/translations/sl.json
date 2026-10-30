@@ -1,0 +1,41 @@
+{
+    "exceptions": {
+        "backup_size_too_large": {
+            "message": "Velikost varnostne kopije {size}GB je prevelika, da bi jo bilo mogo\u010de prenesti v oblak Home Assistant Cloud."
+        }
+    },
+    "issues": {
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Mo\u017enost `{deprecated_option}` za pretvorbo besedila v govor v integraciji {integration_name} je zastarela in bo odstranjena.\nPosodobite svoje avtomatizacije in skripte, da zamenjate mo\u017enost `{deprecated_option}` s podprto mo\u017enostjo `{replacement_option}`."
+                    }
+                }
+            },
+            "title": "Mo\u017enost pretvorbe besedila v govor {deprecated_option} je zastarela"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Celoten vnos `platform: cloud` pod razdelkom `tts:` v configuration.yaml je zastarel in ga je treba odstraniti. Z uporabni\u0161kim vmesnikom lahko spremenite nastavitve platforme za pretvorbo besedila v govor v oblaku. Prilagodite datoteko configuration.yaml in znova za\u017eenite Home Assistant, da odpravite to te\u017eavo.",
+            "title": "Konfiguracija platforme za pretvorbo besedila v govor v oblaku je zastarela"
+        },
+        "legacy_subscription": {
+            "title": "Zaznana podedovana naro\u010dnina"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Omogo\u010da dostop do uporabni\u0161kega vmesnika namestitve zunaj lokalnega omre\u017eja, tako da omogo\u010di va\u0161o povezavo Home Assistant Cloud."
+        },
+        "remote_disconnect": {
+            "description": "Prekine povezavo med uporabni\u0161kim vmesnikom namestitve in Home Assistant Cloud. To onemogo\u010di dostop do njega zunaj va\u0161ega lokalnega omre\u017eja."
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa omogo\u010dena",
+            "google_enabled": "Google omogo\u010den",
+            "logged_in": "Prijavljen kot"
+        }
+    }
+}

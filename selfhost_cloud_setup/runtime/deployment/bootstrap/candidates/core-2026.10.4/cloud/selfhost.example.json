@@ -1,0 +1,8 @@
+{
+  "url": "https://cloud.test:8443",
+  "ca": "/config/selfhost/ca.pem",
+  "jwt_public": "/config/selfhost/jwt-public.pem",
+  "snitun_websocket": "wss://cloud.test:8443/snitun",
+  "certificate_issuer": true,
+  "migrate_existing_account": false
+}

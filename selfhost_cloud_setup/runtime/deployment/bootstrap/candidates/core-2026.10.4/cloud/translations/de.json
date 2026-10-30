@@ -1,0 +1,123 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Assistant Cloud-KI"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "Home Assistant Cloud konnte nicht erreicht werden, um die Anmeldung abzuschlie\u00dfen. Bitte versuche es erneut."
+        },
+        "auto_login_failed_timeout": {
+            "message": "Deine E-Mail-Adresse wurde nicht rechtzeitig best\u00e4tigt, daher wurde das Warten abgebrochen. Dein Konto wurde erstellt, bitte best\u00e4tige deine E-Mail-Adresse und melde dich an."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "Ein unerwarteter Fehler hat deine Anmeldung verhindert. Bitte versuche, dich erneut anzumelden."
+        },
+        "backup_size_too_large": {
+            "message": "Das Backup ist mit {size} GB zu gro\u00df, um zu Home Assistant Cloud hochgeladen zu werden."
+        },
+        "no_pending_auto_login": {
+            "message": "Es gibt keine Registrierung, die auf eine E-Mail-Best\u00e4tigung wartet."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "Du hast keine Verbindung zu Home Assistant Cloud. \u00dcberpr\u00fcfe dein Netzwerk.",
+            "title": "Keine Verbindung"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Die Option `{deprecated_option}` f\u00fcr Text-zu-Sprache in der Integration {integration_name} ist veraltet und wird entfernt.\nBitte aktualisiere deine Automationen und Skripte, um die Option `{deprecated_option}` durch die unterst\u00fctzte Option `{replacement_option}` zu ersetzen.",
+                        "title": "Eine veraltete Stimme wurde verwendet"
+                    }
+                }
+            },
+            "title": "Die Text-zu-Sprache-Option {deprecated_option} ist veraltet"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Der gesamte Eintrag `platform: cloud` im Abschnitt `tts:` in der Datei configuration.yaml ist veraltet und sollte entfernt werden. Du kannst die Benutzeroberfl\u00e4che verwenden, um Einstellungen f\u00fcr die Cloud-Text-zu-Sprache-Plattform zu \u00e4ndern. Bitte passe deine configuration.yaml-Datei an und starte Home Assistant neu, um dieses Problem zu beheben.",
+            "title": "Die Konfiguration der Cloud-Text-zu-Sprache-Plattform ist veraltet"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Die Stimme `{deprecated_voice}` ist veraltet und wird entfernt.\nBitte aktualisiere deine Automationen und Skripte, um `{deprecated_voice}` durch eine andere Stimme wie z. B. `{replacement_voice}` zu ersetzen.",
+                        "title": "Eine veraltete Stimme wurde verwendet"
+                    }
+                }
+            },
+            "title": "Eine veraltete Stimme wurde verwendet"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Der Vorgang hat zu lange gedauert. Bitte versuche es sp\u00e4ter noch einmal."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Wir haben k\u00fcrzlich unser Abonnementsystem aktualisiert. Um die Home Assistant Cloud weiterhin nutzen zu k\u00f6nnen, musst du die \u00c4nderung einmalig in PayPal genehmigen. \n\nDies dauert 1 Minute und erh\u00f6ht den Preis nicht."
+                    }
+                }
+            },
+            "title": "Legacy Abonnement erkannt"
+        },
+        "no_subscription": {
+            "description": "Du hast kein Home Assistant Cloud-Abonnement. Abonniere unter {account_url}.",
+            "title": "Kein Abonnement erkannt"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "Die DNS-Konfiguration f\u00fcr deine benutzerdefinierte Domain ({custom_domains}) ist nicht korrekt. Diese Domain wurde jetzt ignoriert und wird nicht f\u00fcr Home Assistant Cloud verwendet. Wenn du diese Domain verwenden m\u00f6chtest, korrigiere bitte die DNS-Konfiguration und starte Home Assistant neu. Wenn du dies nicht mehr ben\u00f6tigst, kannst du es von der Kontoseite entfernen.",
+            "title": "Benutzerdefinierte Domain ignoriert"
+        },
+        "subscription_expired": {
+            "description": "Dein Home Assistant Cloud-Abonnement ist abgelaufen. Erneut abonnieren unter {account_url}.",
+            "title": "Abonnement abgelaufen"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "Die DNS-Konfiguration f\u00fcr deine benutzerdefinierte Domain ({custom_domains}) ist nicht korrekt. Bitte \u00fcberpr\u00fcfe die DNS-Konfiguration deiner Domain und stelle sicher, dass sie auf den richtigen CNAME verweist.",
+            "title": "Falsche Konfiguration f\u00fcr benutzerdefinierte Domain"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Wir testen eine neue Sprache-zu-Text-Engine f\u00fcr Home Assistant Cloud \u2013 den Teil der Sprachsteuerung, der das, was du sagst, in Text umwandelt. In unseren Tests kommt sie besser mit Akzenten, Hintergrundger\u00e4uschen und anderen Sprachen als Englisch zurecht.\n\nSolange diese Funktion aktiviert ist, werden alle Audioaufnahmen deiner Sprachbefehle von [Soniox](https://soniox.com/) statt von unserem derzeitigen Anbieter verarbeitet. Dies gilt nur f\u00fcr Assistenten, die so konfiguriert sind, dass sie Home Assistant Cloud als Spracherkennungs-Engine nutzen. Die Daten werden \u00fcber einen Nabu-Casa-Proxy geleitet, der die Authentifizierung \u00fcbernimmt und sie an die dir am n\u00e4chsten gelegene Verarbeitungsregion weiterleitet. Nabu Casa verarbeitet, speichert oder protokolliert deine Audiodaten zu keinem Zeitpunkt. Alle anderen Aspekte deiner Sprachpipeline bleiben unver\u00e4ndert, und du kannst diese Funktion jederzeit wieder deaktivieren.",
+            "disable_confirmation": "Alle Assistenten, die derzeit die neue Engine verwenden, werden wieder von unserem derzeitigen Spracherkennungsanbieter transkribiert.",
+            "enable_confirmation": "Diese Funktion befindet sich noch in der Entwicklung und kann sich noch \u00e4ndern. Solange sie aktiviert ist, werden die Audioaufnahmen deiner Sprachbefehle in den unterst\u00fctzten Sprachen von Soniox statt von unserem derzeitigen Anbieter transkribiert.",
+            "name": "Neue Sprache-zu-Text-Engine"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Erm\u00f6glicht den Zugriff auf die Benutzeroberfl\u00e4che der Instanz von au\u00dferhalb des lokalen Netzwerks durch Aktivieren der Verbindung zu Home Assistant Cloud.",
+            "name": "Fernzugriff via Home Assistant Cloud aktivieren"
+        },
+        "remote_disconnect": {
+            "description": "Trennt die Benutzeroberfl\u00e4che der Instanz von Home Assistant Cloud. Dadurch wird der Zugriff von au\u00dferhalb des lokalen Netzwerks deaktiviert.",
+            "name": "Fernzugriff via Home Assistant Cloud deaktivieren"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa aktiviert",
+            "can_reach_cert_server": "Zertifikatsserver erreichbar",
+            "can_reach_cloud": "Home Assistant Cloud erreichbar",
+            "can_reach_cloud_auth": "Authentifizierungsserver erreichbar",
+            "certificate_status": "Zertifikatsstatus",
+            "google_enabled": "Google aktiviert",
+            "instance_id": "Instanz-ID",
+            "logged_in": "Angemeldet",
+            "relayer_connected": "Relayer verbunden",
+            "relayer_region": "Relayer-Region",
+            "remote_connected": "Remote verbunden",
+            "remote_enabled": "Fernzugriff aktiviert",
+            "remote_server": "Remote-Server",
+            "subscription_expiration": "Ablauf des Abonnements"
+        }
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Assistant Cloud AI"
+            }
+        }
+    },
+    "exceptions": {
+        "backup_size_too_large": {
+            "message": "Varukoopia suurus {size} GB on Home Assistant Cloudi \u00fcleslaadimiseks liiga suur."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "Puudub \u00fchendus Home Assistant Cloudiga. Kontrolli oma v\u00f5rku.",
+            "title": "\u00dchendus puudub"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Sidumise {integration_name} tekstist k\u00f5neks muutmise valik `{deprecated_option}` on aegunud ja see eemaldatakse.\nAjakohasta oma automatiseerimisi ja skripte, et asendada valik `{deprecated_option}` selle asemel toetatud valikuga `{replacement_option}`.",
+                        "title": "Kasutati aegunud h\u00e4\u00e4lt"
+                    }
+                }
+            },
+            "title": "K\u00f5nes\u00fcnteesi valik {deprecated_option}on aegunud"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Kogu kirje `platform: cloud` configuration.yaml'i jaotises `tts:` on aegunud ja tuleks eemaldada. Kasutajaliidese abil saad muuta Cloud teksti-k\u00f5neks platvormi seadeid. Kohandage oma configuration.yaml ja taask\u00e4ivita Home Assistant, et see probleem lahendada.",
+            "title": "Pilvep\u00f5hine tekst-k\u00f5neks platvormi konfiguratsioon on kaotanud kehtivuse"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "H\u00e4\u00e4l ' {deprecated_voice}' on aegunud ja see eemaldatakse.\n V\u00e4rskenda oma automatiseeringuid ja skripte, et asendada ' {deprecated_voice}' m\u00f5ne muu h\u00e4\u00e4lega, nagu nt. ' {replacement_voice}'.",
+                        "title": "Kasutati aegunud h\u00e4\u00e4lt"
+                    }
+                }
+            },
+            "title": "Kasutati aegunud h\u00e4\u00e4lt"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Toiming v\u00f5ttis liiga kaua aega. Palun proovi hiljem uuesti."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Oleme hiljuti uuendanud oma tellimiss\u00fcsteemi. Home Assistant Cloudi kasutamise j\u00e4tkamiseks pead \u00fchekordselt kinnitama muudatuse PayPalis.\n\nSee v\u00f5tab aega 1 minut ja ei t\u00f5sta hinda."
+                    }
+                }
+            },
+            "title": "Tuvastati p\u00e4randtellimus"
+        },
+        "no_subscription": {
+            "description": "Puudub Home Assistant Cloudi tellimus. Liitu aadressil {account_url}.",
+            "title": "Tellimusi ei tuvastatud"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "Kohandatud domeeni ( {custom_domains} ) DNS-i konfiguratsioon ei ole \u00f5ige. Seda domeeni on n\u00fc\u00fcd eiratud ja seda ei kasutata Home Assistant Cloudi jaoks. Kui soovid seda domeeni kasutada, paranda DNS-i konfiguratsioon ja taask\u00e4ivita Home Assistant. Kui seda enam ei vajata, saad selle konto lehelt eemaldada.",
+            "title": "Kohandatud domeeni eirati"
+        },
+        "subscription_expired": {
+            "description": "Home Assistant Cloudi tellimus on aegunud. Liitu uuesti aadressil {account_url}.",
+            "title": "Tellimus on aegunud"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "Kohandatud domeeni ({custom_domains}) DNS-konfiguratsioon ei ole \u00f5ige. Palun kontrolli domeeni DNS-konfiguratsiooni ja veendu, et see osutab \u00f5igele CNAME-le.",
+            "title": "Tuvastati vale kohandatud domeeni konfiguratsioon"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Me katsetame Home Assistant Cloudi jaoks uut k\u00f5nest tekstiks muundamise mootorit \u2013 see on h\u00e4\u00e4ljuhtimise osa, mis muudab teie \u00f6eldu s\u00f5nadeks. Meie katsetuste p\u00f5hjal tuleb see paremini toime aktsentide, taustm\u00fcra ja inglise keelest erinevate keeltega.\n\nKui see on sisse l\u00fclitatud, t\u00f6\u00f6deldakse teie h\u00e4\u00e4lk\u00e4skude heli [Sonioxi](https://soniox.com/) poolt, mitte meie praeguse teenusepakkuja poolt. See kehtib ainult nendele assistentidele, mis on konfigureeritud kasutama Home Assistant Cloudi k\u00f5nest tekstiks mootorina. Andmed liiguvad l\u00e4bi Nabu Casa proksi, mis tegeleb autentimisega ja suunab need edasi teile l\u00e4himasse t\u00f6\u00f6tlemispiirkonda. Nabu Casa ei t\u00f6\u00f6delda, ei salvestata ega logita teie helisignaali mingil hetkel. K\u00f5ik muu teie h\u00e4\u00e4le t\u00f6\u00f6tlemisahelas j\u00e4\u00e4b samaks ning te saate selle funktsiooni igal ajal uuesti v\u00e4lja l\u00fclitada.",
+            "disable_confirmation": "K\u00f5ik assistendid, kes praegu kasutavad uut mootorit, hakkavad taas kasutama meie praeguse k\u00f5nest tekstiks muundamise teenusepakkuja teenust.",
+            "enable_confirmation": "See funktsioon on alles arendusj\u00e4rgus ja v\u00f5ib muutuda. Kuigi see on lubatud, transkribeerib h\u00e4\u00e4lk\u00e4skluste heli toetatud keeltes Soniox, mitte meie praegune pakkuja.",
+            "name": "Uus k\u00f5nest tekstiks mootor"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Teeb Home Assistant Cloudi abil eksemplari kasutajaliidese juurdep\u00e4\u00e4setavaks v\u00e4ljaspool kohalikku v\u00f5rku.",
+            "name": "Luba Home Assistant Cloudi kaugjuurdep\u00e4\u00e4s"
+        },
+        "remote_disconnect": {
+            "description": "Katkestab eksemplari kasutajaliidese \u00fchenduse Home Assistant Cloudiga. See keelab juurdep\u00e4\u00e4su sellele v\u00e4ljaspool kohalikku v\u00f5rku.",
+            "name": "Keela Home Assistant Cloudi kaugjuurdep\u00e4\u00e4s"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa on lubatud",
+            "can_reach_cert_server": "\u00dchendus serdiserveriga",
+            "can_reach_cloud": "\u00dchendus Home Assistant Cloudiga",
+            "can_reach_cloud_auth": "\u00dchenda tuvastusserveriga",
+            "certificate_status": "Sertifikaadi olek",
+            "google_enabled": "Google on lubatud",
+            "instance_id": "Eksemplari ID",
+            "logged_in": "Sisse logitud",
+            "relayer_connected": "Edastaja on \u00fchendatud",
+            "relayer_region": "Relayer piirkond",
+            "remote_connected": "Kaug\u00fchendus on loodud",
+            "remote_enabled": "Kaug\u00fchendus on lubatud",
+            "remote_server": "Kaugserver",
+            "subscription_expiration": "Tellimuse aegumine"
+        }
+    }
+}

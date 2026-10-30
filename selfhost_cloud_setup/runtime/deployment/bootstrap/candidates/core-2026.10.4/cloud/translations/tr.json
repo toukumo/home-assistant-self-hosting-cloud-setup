@@ -1,0 +1,123 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Asistan\u0131 Bulut Yapay Zeka"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "Home Assistant Cloud'a ba\u011flan\u0131lamad\u0131\u011f\u0131 i\u00e7in oturum a\u00e7ma i\u015fleminiz tamamlanamad\u0131. L\u00fctfen tekrar oturum a\u00e7may\u0131 deneyin."
+        },
+        "auto_login_failed_timeout": {
+            "message": "E-postan\u0131z zaman\u0131nda onaylanmad\u0131\u011f\u0131 i\u00e7in beklemeyi b\u0131rakt\u0131k. Hesab\u0131n\u0131z olu\u015fturuldu, l\u00fctfen e-postan\u0131z\u0131 onaylay\u0131n ve giri\u015f yap\u0131n."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "Beklenmedik bir hata nedeniyle oturum a\u00e7ma i\u015fleminiz ger\u00e7ekle\u015ftirilemedi. L\u00fctfen oturum a\u00e7may\u0131 tekrar deneyin."
+        },
+        "backup_size_too_large": {
+            "message": "{size} GB'l\u0131k yedekleme boyutu Home Assistant Cloud'a y\u00fcklenemeyecek kadar b\u00fcy\u00fck."
+        },
+        "no_pending_auto_login": {
+            "message": "E-posta onay\u0131 i\u00e7in bekleyen bir kay\u0131t yoktur."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "Home Assistant Cloud'a ba\u011flant\u0131n\u0131z yok. A\u011f\u0131n\u0131z\u0131 kontrol edin.",
+            "title": "Ba\u011flant\u0131 yok"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "{integration_name} entegrasyonunda metinden konu\u015fmaya y\u00f6nelik ` {deprecated_option} ` se\u00e7ene\u011fi kullan\u0131mdan kald\u0131r\u0131ld\u0131 ve kald\u0131r\u0131lacak.\n L\u00fctfen otomasyonlar\u0131n\u0131z\u0131 ve komut dosyalar\u0131n\u0131z\u0131, \" {deprecated_option} \" se\u00e7ene\u011fini desteklenen bir \" {replacement_option} \" se\u00e7ene\u011fiyle de\u011fi\u015ftirecek \u015fekilde g\u00fcncelleyin.",
+                        "title": "Kullan\u0131mdan kald\u0131r\u0131lm\u0131\u015f bir ses kullan\u0131ld\u0131"
+                    }
+                }
+            },
+            "title": "{deprecated_option} metinden sese se\u00e7ene\u011fi kullan\u0131m d\u0131\u015f\u0131 b\u0131rak\u0131ld\u0131"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Configuration.yaml dosyas\u0131ndaki \"tts:\" b\u00f6l\u00fcm\u00fcn\u00fcn alt\u0131ndaki \"platform: cloud\" giri\u015finin tamam\u0131 kullan\u0131mdan kald\u0131r\u0131ld\u0131 ve kald\u0131r\u0131lmal\u0131d\u0131r. Bulut metinden konu\u015fmaya platformunun ayarlar\u0131n\u0131 de\u011fi\u015ftirmek i\u00e7in kullan\u0131c\u0131 aray\u00fcz\u00fcn\u00fc kullanabilirsiniz. Bu sorunu d\u00fczeltmek i\u00e7in l\u00fctfen konfig\u00fcrasyon.yaml dosyan\u0131z\u0131 ayarlay\u0131n ve Home Assistant'\u0131 yeniden ba\u015flat\u0131n.",
+            "title": "Bulut metin-konu\u015fma platformu yap\u0131land\u0131rmas\u0131 kullan\u0131mdan kald\u0131r\u0131ld\u0131"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "`{deprecated_voice}` sesi kullan\u0131mdan kald\u0131r\u0131ld\u0131 ve kald\u0131r\u0131lacak.\n L\u00fctfen `{deprecated_voice}` ifadesini ba\u015fka bir sesle de\u011fi\u015ftirecek \u015fekilde otomasyonlar\u0131n\u0131z\u0131 ve komut dosyalar\u0131n\u0131z\u0131 g\u00fcncelleyin; \u00f6rne\u011fin. `{replacement_voice}`.",
+                        "title": "Kullan\u0131mdan kald\u0131r\u0131lm\u0131\u015f bir ses kullan\u0131ld\u0131"
+                    }
+                }
+            },
+            "title": "Kullan\u0131mdan kald\u0131r\u0131lm\u0131\u015f bir ses kullan\u0131ld\u0131"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Operasyon \u00e7ok uzun s\u00fcrd\u00fc. L\u00fctfen daha sonra tekrar deneyiniz."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Yak\u0131n zamanda abonelik sistemimizi g\u00fcncelledik. Home Assistant Cloud'u kullanmaya devam etmek i\u00e7in PayPal'da de\u011fi\u015fikli\u011fi bir defaya mahsus onaylaman\u0131z gerekir. \n\n Bu i\u015flem 1 dakika s\u00fcrer ve fiyat\u0131 art\u0131rmaz."
+                    }
+                }
+            },
+            "title": "Eski abonelik alg\u0131land\u0131"
+        },
+        "no_subscription": {
+            "description": "Bir Home Assistant Cloud aboneli\u011finiz yok. {account_url} adresinden abone olun.",
+            "title": "Abonelik alg\u0131lanmad\u0131"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "\u00d6zel alan ad\u0131n\u0131z\u0131n ( {custom_domains} ) DNS yap\u0131land\u0131rmas\u0131 do\u011fru de\u011fil. Bu alan ad\u0131 art\u0131k g\u00f6z ard\u0131 edildi ve Home Assistant Cloud i\u00e7in kullan\u0131lmayacak. Bu alan ad\u0131n\u0131 kullanmak istiyorsan\u0131z l\u00fctfen DNS yap\u0131land\u0131rmas\u0131n\u0131 d\u00fczeltin ve Home Assistant'\u0131 yeniden ba\u015flat\u0131n. Art\u0131k buna ihtiyac\u0131n\u0131z yoksa hesap sayfas\u0131ndan kald\u0131rabilirsiniz.",
+            "title": "\u00d6zel alan ad\u0131 yoksay\u0131ld\u0131"
+        },
+        "subscription_expired": {
+            "description": "Home Assistant Cloud aboneli\u011finiz sona erdi. {account_url} adresinden yeniden abone olun.",
+            "title": "Abonelik s\u00fcresi doldu"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "\u00d6zel alan ad\u0131n\u0131z\u0131n ( {custom_domains} ) DNS yap\u0131land\u0131rmas\u0131 do\u011fru de\u011fil. L\u00fctfen alan ad\u0131n\u0131z\u0131n DNS yap\u0131land\u0131rmas\u0131n\u0131 kontrol edin ve do\u011fru CNAME'ye i\u015faret etti\u011finden emin olun.",
+            "title": "Yanl\u0131\u015f \u00f6zel etki alan\u0131 yap\u0131land\u0131rmas\u0131 alg\u0131land\u0131"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Home Assistant Cloud i\u00e7in yeni bir konu\u015fmadan metne d\u00f6n\u00fc\u015ft\u00fcrme motorunu test ediyoruz. Bu motor, sesli kontrol\u00fcn s\u00f6ylediklerinizi kelimelere \u00e7eviren k\u0131sm\u0131d\u0131r. Testlerimizde, aksanlarla, arka plan g\u00fcr\u00fclt\u00fcs\u00fcyle ve \u0130ngilizce d\u0131\u015f\u0131ndaki dillerle daha iyi ba\u015fa \u00e7\u0131k\u0131yor.\n\nBu \u00f6zellik etkinle\u015ftirildi\u011finde, sesli komutlar\u0131n\u0131zdan gelen t\u00fcm sesler mevcut sa\u011flay\u0131c\u0131m\u0131z yerine [Soniox](https://soniox.com/) taraf\u0131ndan i\u015flenir. Bu yaln\u0131zca Home Assistant Cloud'u STT motoru olarak kullanacak \u015fekilde yap\u0131land\u0131r\u0131lm\u0131\u015f Asistanlar i\u00e7in ge\u00e7erlidir. Ses, kimlik do\u011frulamas\u0131n\u0131 y\u00f6neten ve size en yak\u0131n i\u015fleme b\u00f6lgesine ileten bir Nabu Casa proxy'si \u00fczerinden ge\u00e7er. Nabu Casa, sesinizi hi\u00e7bir noktada i\u015flemez, saklamaz veya kaydetmez. Ses i\u015fleme hatt\u0131n\u0131z\u0131n geri kalan her \u015feyi ayn\u0131 kal\u0131r ve bunu istedi\u011finiz zaman tekrar kapatabilirsiniz.",
+            "disable_confirmation": "Yeni motoru kullanan t\u00fcm asistanlar, mevcut konu\u015fmadan metne d\u00f6n\u00fc\u015ft\u00fcrme sa\u011flay\u0131c\u0131m\u0131z taraf\u0131ndan yaz\u0131ya d\u00f6n\u00fc\u015ft\u00fcr\u00fclmeye devam edecektir.",
+            "enable_confirmation": "Bu \u00f6zellik hen\u00fcz geli\u015ftirme a\u015famas\u0131ndad\u0131r ve de\u011fi\u015fiklik g\u00f6sterebilir. Etkinle\u015ftirildi\u011fi s\u00fcre boyunca, desteklenen dillerdeki sesli komutlar\u0131n\u0131zdan gelen sesler, mevcut sa\u011flay\u0131c\u0131m\u0131z yerine Soniox taraf\u0131ndan yaz\u0131ya d\u00f6k\u00fclecektir.",
+            "name": "Yeni konu\u015fmadan metne d\u00f6n\u00fc\u015ft\u00fcrme motoru"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Home Assistant Cloud ba\u011flant\u0131n\u0131z\u0131 etkinle\u015ftirerek \u00f6rnek kullan\u0131c\u0131 aray\u00fcz\u00fcne yerel a\u011f\u0131n d\u0131\u015f\u0131ndan da eri\u015filebilmesini sa\u011flar.",
+            "name": "Home Assistant Cloud uzaktan eri\u015fimini etkinle\u015ftirin."
+        },
+        "remote_disconnect": {
+            "description": "\u00d6rnek kullan\u0131c\u0131 aray\u00fcz\u00fcn\u00fc Home Assistant Cloud'dan ay\u0131r\u0131r. Bu, yerel a\u011f\u0131n\u0131z\u0131n d\u0131\u015f\u0131ndan ona eri\u015fimi devre d\u0131\u015f\u0131 b\u0131rak\u0131r.",
+            "name": "Home Assistant Cloud uzaktan eri\u015fimini devre d\u0131\u015f\u0131 b\u0131rak"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa etkin",
+            "can_reach_cert_server": "Sertifika sunucusuna ula\u015f\u0131n",
+            "can_reach_cloud": "Home Assistant Cloud'a ula\u015f\u0131n",
+            "can_reach_cloud_auth": "Kimlik do\u011frulama sunucusuna ula\u015f\u0131n",
+            "certificate_status": "Sertifika durumu",
+            "google_enabled": "Google etkin",
+            "instance_id": "\u00d6rnek Kimli\u011fi",
+            "logged_in": "Giri\u015f Yapt\u0131",
+            "relayer_connected": "R\u00f6le ba\u011fland\u0131",
+            "relayer_region": "Aktar\u0131c\u0131 b\u00f6lgesi",
+            "remote_connected": "Uzaktan ba\u011fl\u0131",
+            "remote_enabled": "Uzaktan etkin",
+            "remote_server": "Uzak sunucu",
+            "subscription_expiration": "Aboneli\u011fin sona ermesi"
+        }
+    }
+}

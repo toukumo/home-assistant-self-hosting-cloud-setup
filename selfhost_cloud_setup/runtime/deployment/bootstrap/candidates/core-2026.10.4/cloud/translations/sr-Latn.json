@@ -1,0 +1,123 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Assistant Cloud AI"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "Povezivanje sa Home Assistant Cloud-om nije uspelo radi zavr\u0161etka prijave. Poku\u0161ajte ponovo."
+        },
+        "auto_login_failed_timeout": {
+            "message": "E-po\u0161ta nije potvr\u0111ena na vreme, pa je \u010dekanje obustavljeno. Va\u0161 nalog je kreiran, pa potvrdite e-po\u0161tu i prijavite se."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "Neo\u010dekivana gre\u0161ka je spre\u010dila prijavu. Poku\u0161ajte ponovo."
+        },
+        "backup_size_too_large": {
+            "message": "Rezervna kopija veli\u010dine {size} GB je prevelika za slanje na Home Assistant Cloud."
+        },
+        "no_pending_auto_login": {
+            "message": "Nema registracije koja \u010deka na potvrdu e-po\u0161te."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "Nemate vezu sa Home Assistant Cloud-om. Proverite mre\u017eu.",
+            "title": "Nema veze"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Opcija {deprecated_option} za tekst-u-govor u {integration_name} integraciji je zastarela i bi\u0107e uklonjena. \nA\u017eurirajte va\u0161e automatizacije i skripte tako da zamenite opciju {deprecated_option} opcijom koja podr\u017eava {replacement_option}.",
+                        "title": "Kori\u0161\u0107en je zastareli glas"
+                    }
+                }
+            },
+            "title": "Opcija {deprecated_option} za pretvaranje teksta u govor je zastarela."
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Cela `platform: cloud` stavka u `tts:` sekciji u configuration.yaml je zastarela i treba da se ukloni. \nMo\u017eete koristiti UI da promenite pode\u0161avanja za Cloud tekst-u-govor platformu. \nMolimo vas da prilagodite configuration.yaml i restartujete Home Assistant da biste re\u0161ili ovaj problem.",
+            "title": "Konfiguracija Cloud platforme za tekst-u-govor je zastarela."
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Glas {deprecated_voice} je zastareo i bi\u0107e uklonjen.\nMolimo vas da a\u017eurirate va\u0161e automatizacije i skripte tako \u0161to \u0107ete zameniti {deprecated_voice} drugim glasom, kao \u0161to je npr. {replacement_voice}.",
+                        "title": "Kori\u0161\u0107en je zastareli glas"
+                    }
+                }
+            },
+            "title": "Kori\u0161\u0107en je zastareli glas"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Operacija je trajala predugo. Poku\u0161ajte ponovo kasnije."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Nedavno smo a\u017eurirali na\u0161 sistem pretplate. Da biste nastavili da koristite Home Assistant Cloud, potrebno je da jednom odobrite promenu u PayPal-u.  \n\nOvaj postupak traje 1 minut i ne\u0107e pove\u0107ati cenu."
+                    }
+                }
+            },
+            "title": "Otkrivena zastarela pretplata"
+        },
+        "no_subscription": {
+            "description": "Nemate Home Assistant Cloud pretplatu. Pretplatite se na {account_url}.",
+            "title": "Pretplata nije detektovana"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "DNS konfiguracija za va\u0161 prilago\u0111eni domen ({custom_domains}) nije ispravna. Ovaj domen je sada ignorisan i ne\u0107e se koristiti za Home Assistant Cloud. Ako \u017eelite da koristite ovaj domen, popravite DNS konfiguraciju i restartujte Home Assistant. Ako vam vi\u0161e nije potreban, mo\u017eete ga ukloniti sa stranice naloga.",
+            "title": "Prilago\u0111eni domen je ignorisan"
+        },
+        "subscription_expired": {
+            "description": "Va\u0161a Home Assistant Cloud pretplata je istekla. Ponovo se pretplatite na {account_url}.",
+            "title": "Pretplata je istekla"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "DNS konfiguracija za va\u0161 prilago\u0111eni domen ({custom_domains}) nije ispravna. Proverite DNS konfiguraciju va\u0161eg domena i uverite se da pokazuje na ispravan CNAME.",
+            "title": "Detektovana pogre\u0161na konfiguracija prilago\u0111enog domena"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Testiramo novi sistem za pretvaranje govora u tekst za Home Assistant Cloud \u2013 deo glasovnog upravljanja koji ono \u0161to izgovorite pretvara u re\u010di. U na\u0161em testiranju, ovaj sistem se bolje snalazi sa akcentima, pozadinskom bukom i drugim jezicima osim engleskog.\n\nDok je ova opcija aktivirana, sav audio sadr\u017eaj iz va\u0161ih glasovnih komandi obra\u0111uje [Soniox](https://soniox.com/) umesto na\u0161eg trenutnog provajdera. Ovo je va\u017eno samo za asistente koji su konfigurisani da koriste Home Assistant Cloud kao STT sistem. Audio prolazi kroz Nabu Casa proksi, koji upravlja autentifikacijom i prosle\u0111uje ga u vama najbli\u017ei region za obradu. Nabu Casa ni u jednom trenutku ne obra\u0111uje, ne skladi\u0161ti niti bele\u017ei va\u0161 audio sadr\u017eaj. Sve ostalo u va\u0161em glasovnom toku ostaje isto, a ovu opciju mo\u017eete isklju\u010diti u bilo kom trenutku.",
+            "disable_confirmation": "Bilo koji asistent koji trenutno koristi novi sistem vrati\u0107e se na transkripciju od strane na\u0161eg trenutnog provajdera za pretvaranje govora u tekst.",
+            "enable_confirmation": "Ova funkcija je jo\u0161 uvek u razvoju i podlo\u017ena je promenama. Dok je omogu\u0107ena, audio sadr\u017eaj iz va\u0161ih glasovnih komandi na podr\u017eanim jezicima transkribuje Soniox umesto na\u0161eg trenutnog provajdera.",
+            "name": "Novi sistem za pretvaranje govora u tekst"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Uspostavlja bezbednu vezu za daljinski pristup putem Nabu Casa Cloud servisa.",
+            "name": "Omogu\u0107i daljinski pristup"
+        },
+        "remote_disconnect": {
+            "description": "Vr\u0161i deaktivaciju daljinskog pristupa i obustavlja vezu sa Cloud servisom.",
+            "name": "Onemogu\u0107i daljinski pristup"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa omogu\u0107en",
+            "can_reach_cert_server": "Povezanost sa serverom za potvrdu identiteta",
+            "can_reach_cloud": "Dostupnost Home Assistant Cloud-a",
+            "can_reach_cloud_auth": "Povezanost sa serverom za prijavu",
+            "certificate_status": "Status potvrde",
+            "google_enabled": "Google omogu\u0107en",
+            "instance_id": "ID instance",
+            "logged_in": "Prijavljen",
+            "relayer_connected": "Povezivanje preko relayer-a uspostavljeno",
+            "relayer_region": "Region relejera",
+            "remote_connected": "Daljinsko povezivanje uspostavljeno",
+            "remote_enabled": "Daljinsko upravljanje omogu\u0107eno",
+            "remote_server": "Udaljeni server",
+            "subscription_expiration": "Isticanje pretplate"
+        }
+    }
+}

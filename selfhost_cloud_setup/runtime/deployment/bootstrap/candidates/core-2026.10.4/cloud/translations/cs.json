@@ -1,0 +1,123 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Assistant Cloud AI"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "Nepoda\u0159ilo se spojit se slu\u017ebou Home Assistant Cloud a dokon\u010dit va\u0161e p\u0159ihl\u00e1\u0161en\u00ed. Zkuste se p\u0159ihl\u00e1sit znovu."
+        },
+        "auto_login_failed_timeout": {
+            "message": "V\u00e1\u0161 e-mail nebyl v\u010das potvrzen, tak\u017ee jsme p\u0159estali \u010dekat. V\u00e1\u0161 \u00fa\u010det byl vytvo\u0159en, proto potvr\u010fte sv\u016fj e-mail a p\u0159ihlaste se."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "Kv\u016fli neo\u010dek\u00e1van\u00e9 chyb\u011b se n\u00e1m nepoda\u0159ilo v\u00e1s p\u0159ihl\u00e1sit. Zkuste se p\u0159ihl\u00e1sit znovu."
+        },
+        "backup_size_too_large": {
+            "message": "Velikost z\u00e1lohy {size}GB je p\u0159\u00edli\u0161 velk\u00e1 na to, aby ji bylo mo\u017en\u00e9 nahr\u00e1t do Home Assistant Cloud."
+        },
+        "no_pending_auto_login": {
+            "message": "Pro registraci nen\u00ed t\u0159eba \u010dekat na potvrzen\u00ed e-mailem."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "Nem\u00e1te p\u0159ipojen\u00ed k Home Assistant Cloud. Zkontrolujte svou s\u00ed\u0165.",
+            "title": "\u017d\u00e1dn\u00e9 p\u0159ipojen\u00ed"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Volba \"{deprecated_option}\" pro p\u0159evod textu na \u0159e\u010d v integraci {integration_name} je zastaral\u00e1 a bude odebr\u00e1na. Aktualizujte sv\u00e9 automatizace a skripty a m\u00edsto toho nahra\u010fte volbu \"{deprecated_option}\" volbou pro podporovanou \"{replacement_option}\".",
+                        "title": "Byl pou\u017eit zastaral\u00fd hlas"
+                    }
+                }
+            },
+            "title": "Volba p\u0159evodu textu na \u0159e\u010d {deprecated_option} je zastaral\u00e1"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Cel\u00e1 polo\u017eka \"platform: cloud\" v sekci \"tts:\" v configuration.yaml je zastaral\u00e1 a m\u011bla by b\u00fdt odebr\u00e1na. Pomoc\u00ed u\u017eivatelsk\u00e9ho rozhran\u00ed m\u016f\u017eete zm\u011bnit nastaven\u00ed pro cloudovou platformu p\u0159evodu textu na \u0159e\u010d. Chcete-li tento probl\u00e9m vy\u0159e\u0161it, upravte soubor configuration.yaml a restartujte Home Assistanta.",
+            "title": "Nastaven\u00ed cloudov\u00e9 platformy p\u0159evodu textu na \u0159e\u010d je zastaral\u00e1"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Hlas \"{deprecated_voice}\" je zastaral\u00fd a bude odebr\u00e1n.\nAktualizujte sv\u00e9 automatizace a skripty a m\u00edsto toho nahra\u010fte \"{deprecated_voice}\" jin\u00fdm hlasem, jako je nap\u0159. \"{replacement_voice}\".",
+                        "title": "Byl pou\u017eit zastaral\u00fd hlas"
+                    }
+                }
+            },
+            "title": "Byl pou\u017eit zastaral\u00fd hlas"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Operace trvala p\u0159\u00edli\u0161 dlouho. Ukuste to pozd\u011bji znovu."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Ned\u00e1vno jsme aktualizovali n\u00e1\u0161 syst\u00e9m p\u0159edplatn\u00e9ho. Chcete-li pokra\u010dovat v pou\u017e\u00edv\u00e1n\u00ed Home Assistant Cloud, mus\u00edte zm\u011bnu jednor\u00e1zov\u011b schv\u00e1lit ve slu\u017eb\u011b PayPal.\n\nTo trv\u00e1 1 minutu a nezv\u00fd\u0161\u00ed cenu."
+                    }
+                }
+            },
+            "title": "Bylo zji\u0161t\u011bno star\u0161\u00ed p\u0159edplatn\u00e9"
+        },
+        "no_subscription": {
+            "description": "Nem\u00e1te p\u0159edplatn\u00e9 slu\u017eby Home Assistant Cloud. P\u0159ihlaste se k odb\u011bru na adrese {account_url}.",
+            "title": "Nebylo zji\u0161t\u011bno \u017e\u00e1dn\u00e9 p\u0159edplatn\u00e9"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "Nastaven\u00ed DNS pro va\u0161i vlastn\u00ed dom\u00e9nu ({custom_domains}) nen\u00ed spr\u00e1vn\u00e9. Tato dom\u00e9na byla nyn\u00ed ignorov\u00e1na a nebude pou\u017eita pro Home Assistant Cloud. Pokud chcete pou\u017e\u00edvat tuto dom\u00e9nu, opravte nastaven\u00ed DNS a restartujte Home Assistanta. Pokud jej ji\u017e nepot\u0159ebujete, m\u016f\u017eete jej odebrat ze str\u00e1nky \u00fa\u010dtu.",
+            "title": "Vlastn\u00ed dom\u00e9na byla ignorov\u00e1na"
+        },
+        "subscription_expired": {
+            "description": "Va\u0161e p\u0159edplatn\u00e9 slu\u017eby Home Assistant Cloud vypr\u0161elo. Obnovte si p\u0159edplatn\u00e9 na {account_url}.",
+            "title": "P\u0159edplatn\u00e9 vypr\u0161elo"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "Nastaveni\u00ed DNS pro va\u0161i vlastn\u00ed dom\u00e9nu ({custom_domains}) nen\u00ed spr\u00e1vn\u00e1. Zkontrolujte nastaven\u00ed DNS va\u0161\u00ed dom\u00e9ny a ujist\u011bte se, \u017ee odkazuje na spr\u00e1vn\u00fd CNAME.",
+            "title": "Bylo zji\u0161t\u011bno nespr\u00e1vn\u00e9 nastaven\u00ed vlastn\u00ed dom\u00e9ny"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Testujeme nov\u00fd engine pro p\u0159evod \u0159e\u010di na text pro Home Assistant Cloud, co\u017e je sou\u010d\u00e1st hlasov\u00e9ho ovl\u00e1d\u00e1n\u00ed, kter\u00e1 p\u0159ev\u00e1d\u00ed to, co \u0159\u00edk\u00e1te, na slova. V na\u0161ich testech si l\u00e9pe porad\u00ed s p\u0159\u00edzvuky, hlukem v pozad\u00ed a jin\u00fdmi jazyky ne\u017e angli\u010dtinou.\n\nI kdy\u017e je tato funkce povolena, ve\u0161ker\u00fd zvuk z va\u0161ich hlasov\u00fdch p\u0159\u00edkaz\u016f je zpracov\u00e1v\u00e1n slu\u017ebou [Soniox](https://soniox.com/) a nikoli na\u0161\u00edm aktu\u00e1ln\u00edm poskytovatelem. Toto se t\u00fdk\u00e1 jen asistent\u016f nastaven\u00fdch pro pou\u017e\u00edv\u00e1n\u00ed slu\u017eby Home Assistant Cloud jako engine STT. Zvuk putuje p\u0159es proxy server Nabu Casa, kter\u00fd zpracov\u00e1v\u00e1 ov\u011b\u0159ov\u00e1n\u00ed a p\u0159epos\u00edl\u00e1 jej do oblasti zpracov\u00e1n\u00ed nejbl\u00ed\u017ee v\u00e1m. Nabu Casa v\u00e1\u0161 zvuk v \u017e\u00e1dn\u00e9m okam\u017eiku nezpracov\u00e1v\u00e1, neukl\u00e1d\u00e1 ani nezaznamen\u00e1v\u00e1. V\u0161echno ostatn\u00ed ve va\u0161em hlasov\u00e9m kan\u00e1lu z\u016fst\u00e1v\u00e1 stejn\u00e9 a tuto funkci m\u016f\u017eete kdykoli vypnout.",
+            "disable_confirmation": "V\u0161ichni Asistenti, kte\u0159\u00ed v sou\u010dasn\u00e9 dob\u011b pou\u017e\u00edvaj\u00ed nov\u00fd engine, budou op\u011bt p\u0159episov\u00e1ni na\u0161\u00edm st\u00e1vaj\u00edc\u00edm poskytovatelem p\u0159evodu \u0159e\u010di na text.",
+            "enable_confirmation": "Tato funkce je st\u00e1le ve v\u00fdvoji a m\u016f\u017ee se zm\u011bnit. I kdy\u017e je povolena, zvuk z va\u0161ich hlasov\u00fdch p\u0159\u00edkaz\u016f v podporovan\u00fdch jazyc\u00edch p\u0159episuje spole\u010dnost Soniox, nikoli n\u00e1\u0161 aktu\u00e1ln\u00ed poskytovatel.",
+            "name": "Nov\u00fd modul pro p\u0159evod \u0159e\u010di na text"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Zp\u0159\u00edstup\u0148uje u\u017eivatelsk\u00e9 rozhran\u00ed instance z vn\u011bj\u0161ku m\u00edstn\u00ed s\u00edt\u011b povolen\u00edm p\u0159ipojen\u00ed Home Assistant Cloud.",
+            "name": "Povolit vzd\u00e1len\u00fd p\u0159\u00edstup Home Assistant Cloud"
+        },
+        "remote_disconnect": {
+            "description": "Odpoj\u00ed u\u017eivatelsk\u00e9 rozhran\u00ed instance od Home Assistant Cloud. T\u00edm k n\u011bmu zak\u00e1\u017ee p\u0159\u00edstup mimo va\u0161i m\u00edstn\u00ed s\u00ed\u0165.",
+            "name": "Zak\u00e1zat vzd\u00e1len\u00fd p\u0159\u00edstup Home Assistant Cloud"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa povolena",
+            "can_reach_cert_server": "Certifika\u010dn\u00ed server dosa\u017een",
+            "can_reach_cloud": "Home Assistant Cloud dosa\u017een",
+            "can_reach_cloud_auth": "Ov\u011b\u0159ovac\u00ed server dosa\u017een",
+            "certificate_status": "Stav certifik\u00e1tu",
+            "google_enabled": "Google povolen",
+            "instance_id": "ID instance",
+            "logged_in": "P\u0159ihl\u00e1\u0161en",
+            "relayer_connected": "Relayer p\u0159ipojen",
+            "relayer_region": "Region Relayeru",
+            "remote_connected": "Vzd\u00e1len\u00e1 spr\u00e1va p\u0159ipojena",
+            "remote_enabled": "Vzd\u00e1len\u00e1 spr\u00e1va povolena",
+            "remote_server": "Vzd\u00e1len\u00fd server",
+            "subscription_expiration": "Platnost p\u0159edplatn\u00e9ho"
+        }
+    }
+}

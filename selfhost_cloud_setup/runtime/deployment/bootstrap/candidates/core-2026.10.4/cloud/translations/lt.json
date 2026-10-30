@@ -1,0 +1,123 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Assistant Cloud AI"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "Nepavyko susisiekti su Home Assistant Cloud, kad b\u016bt\u0173 galima u\u017ebaigti j\u016bs\u0173 prisijungim\u0105. Bandykite prisijungti dar kart\u0105."
+        },
+        "auto_login_failed_timeout": {
+            "message": "J\u016bs\u0173 el. pa\u0161to adresas nebuvo laiku patvirtintas, tod\u0117l nustojome laukti. J\u016bs\u0173 paskyra sukurta, tod\u0117l patvirtinkite savo el. pa\u0161to adres\u0105 ir prisijunkite."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "Netik\u0117ta klaida neleido mums j\u016bs\u0173 prijungti. Bandykite prisijungti dar kart\u0105."
+        },
+        "backup_size_too_large": {
+            "message": "{size} GB atsargin\u0117s kopijos dydis per didelis, kad b\u016bt\u0173 galima \u012fkelti \u012f Home Assistant Cloud."
+        },
+        "no_pending_auto_login": {
+            "message": "Registracijos laukti patvirtinimo el. pa\u0161tu nereikia."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "Neturite ry\u0161io su Home Assistant Cloud. Patikrinkite tinkl\u0105.",
+            "title": "N\u0117ra ry\u0161io"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Teksto \u012f kalb\u0105 parinktis \u201e{deprecated_option}\u201c integruojant {integration_name} nebenaudojama ir bus pa\u0161alinta.\n Atnaujinkite savo automatizavim\u0105 ir scenarijus, kad pakeistum\u0117te parinkt\u012f \u201e{deprecated_option}\u201c palaikomos \u201e{replacement_option}\u201c parinktimi.",
+                        "title": "Buvo naudojamas nebenaudojamas balsas"
+                    }
+                }
+            },
+            "title": "Teksto \u012f kalb\u0105 parinktis {deprecated_option} nebenaudojama"
+        },
+        "deprecated_tts_platform_config": {
+            "description": "Visas \u012fra\u0161as \u201eplatform: debesis\u201c, esantis skiltyje \u201etts:\u201c failo configuration.yaml yra nebenaudojamas ir tur\u0117t\u0173 b\u016bti pa\u0161alintas. Galite naudoti naudotojo s\u0105saj\u0105 nor\u0117dami pakeisti debesies teksto \u012f kalb\u0105 platformos nustatymus. Pakoreguokite configuration.yaml ir i\u0161 naujo paleiskite \u201eHome Assistant\u201c, kad i\u0161spr\u0119stum\u0117te \u0161i\u0105 problem\u0105.",
+            "title": "Debesijos teksto \u012f kalb\u0105 platformos konfig\u016bracija nebenaudojama"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "description": "Balsas \u201e{deprecated_voice}\u201c nebenaudojamas ir bus pa\u0161alintas.\n Atnaujinkite savo automatizavim\u0105 ir scenarijus, kad pakeistum\u0117te \u201e{deprecated_voice}\u201c kitu balsu, pvz., pvz. \u201e{replacement_voice}\u201c.",
+                        "title": "Buvo naudojamas nebenaudojamas balsas"
+                    }
+                }
+            },
+            "title": "Buvo naudojamas nebenaudojamas balsas"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Operacija truko per ilgai. Pabandykite dar kart\u0105 v\u0117liau."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Neseniai atnaujinome prenumeratos sistem\u0105. Nor\u0117dami toliau naudoti \u201eHome Assistant Cloud\u201c, turite vien\u0105 kart\u0105 patvirtinti \u201ePayPal\u201c pakeitim\u0105. \n\n Tai u\u017etrunka 1 minut\u0119 ir nepadidins kainos."
+                    }
+                }
+            },
+            "title": "Aptikta sena prenumerata"
+        },
+        "no_subscription": {
+            "description": "Neturite Home Assistant Cloud prenumeratos. Prenumeruokite adresu {account_url}.",
+            "title": "Prenumerata neaptikta"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "description": "J\u016bs\u0173 tinkinto domeno ({custom_domains}) DNS konfig\u016bracija neteisinga. \u0160is domenas dabar buvo ignoruojamas ir nebus naudojamas \u201eHome Assistant Cloud\u201c. Jei norite naudoti \u0161\u012f domen\u0105, pataisykite DNS konfig\u016bracij\u0105 ir i\u0161 naujo paleiskite \u201eHome Assistant\u201c. Jei jums to nebereikia, galite j\u012f pa\u0161alinti i\u0161 paskyros puslapio.",
+            "title": "Tinkintas domenas ignoruojamas"
+        },
+        "subscription_expired": {
+            "description": "J\u016bs\u0173 Home Assistant Cloud prenumerata baig\u0117si. Prenumeruokite i\u0161 naujo adresu {account_url}.",
+            "title": "Prenumerata baig\u0117si"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "description": "J\u016bs\u0173 tinkinto domeno ({custom_domains}) DNS konfig\u016bracija neteisinga. Patikrinkite savo domeno DNS konfig\u016bracij\u0105 ir \u012fsitikinkite, kad ji nurodo teising\u0105 CNAME.",
+            "title": "Aptikta neteisinga tinkinto domeno konfig\u016bracija"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Testuojame nauj\u0105 kalbos \u012f tekst\u0105 varikl\u012f, skirt\u0105 Home Assistant Cloud \u2013 balso valdymo daliai, kuri paver\u010dia j\u016bs\u0173 pasakyt\u0105 informacij\u0105 \u017eod\u017eiais. M\u016bs\u0173 bandym\u0173 metu jis geriau susidoroja su akcentais, foniniu triuk\u0161mu ir kitomis kalbomis nei angl\u0173.\n\nKai \u0161i funkcija \u012fjungta, bet kok\u012f j\u016bs\u0173 balso komand\u0173 gars\u0105 apdoroja [Soniox](https://soniox.com/), o ne m\u016bs\u0173 dabartinis teik\u0117jas. Tai aktualu tik asistentams, sukonfig\u016bruotiems naudoti Home Assistant Cloud kaip STT varikl\u012f. Jis perduodamas per Nabu Casa tarpin\u012f server\u012f, kuris tvarko autentifikavim\u0105 ir persiun\u010dia j\u012f \u012f ar\u010diausiai j\u016bs\u0173 esant\u012f apdorojimo region\u0105. Nabu Casa jokiu metu neapdoroja, nesaugo ir neregistruoja j\u016bs\u0173 garso. Visa kita apie j\u016bs\u0173 balso sraut\u0105 lieka ta pati, ir j\u016bs galite bet kada v\u0117l i\u0161jungti \u0161i\u0105 funkcij\u0105.",
+            "disable_confirmation": "Bet kurio asistento, \u0161iuo metu naudojan\u010dio nauj\u0105 varikl\u012f, tekst\u0105 v\u0117l transkribuos m\u016bs\u0173 dabartinis kalbos \u012f tekst\u0105 teik\u0117jas.",
+            "enable_confirmation": "\u0160i funkcija vis dar kuriama ir gali keistis. Kol ji \u012fjungta, j\u016bs\u0173 balso komand\u0173 gars\u0105 palaikomomis kalbomis transkribuoja Soniox, o ne m\u016bs\u0173 dabartinis tiek\u0117jas.",
+            "name": "Naujas kalbos \u012f tekst\u0105 konvertavimo variklis"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "Padaro egzemplioriaus vartotojo s\u0105saj\u0105 pasiekiam\u0105 ne vietiniame tinkle, \u012fgalinus \u201eHome Assistant Cloud\u201c ry\u0161\u012f.",
+            "name": "\u012egalinti nuotolin\u0119 prieig\u0105 prie Home Assistant debesies"
+        },
+        "remote_disconnect": {
+            "description": "Atjungia egzemplioriaus vartotojo s\u0105saj\u0105 nuo \u201eHome Assistant Cloud\u201c. Taip i\u0161jungiama prieiga prie jos i\u0161 u\u017e j\u016bs\u0173 vietinio tinklo rib\u0173.",
+            "name": "I\u0161jungti nuotolin\u0119 prieig\u0105 prie Home Assistant Cloud"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa \u012fjungta",
+            "can_reach_cert_server": "Pasiekite sertifikat\u0173 server\u012f",
+            "can_reach_cloud": "Pasiekite \u201eHome Assistant Cloud\u201c.",
+            "can_reach_cloud_auth": "Pasiekite autentifikavimo server\u012f",
+            "certificate_status": "Sertifikato b\u016bsena",
+            "google_enabled": "\u201eGoogle\u201c \u012fjungta",
+            "instance_id": "Atvejo ID",
+            "logged_in": "Prisijung\u0119s",
+            "relayer_connected": "Relayeris prijungtas",
+            "relayer_region": "Relayer regionas",
+            "remote_connected": "Nuotolinis prijungtas",
+            "remote_enabled": "Nuotolinis \u012fjungtas",
+            "remote_server": "Nuotolinis serveris",
+            "subscription_expiration": "Prenumeratos galiojimo laikas"
+        }
+    }
+}

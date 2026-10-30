@@ -1,0 +1,118 @@
+{
+    "entity": {
+        "ai_task": {
+            "cloud_ai": {
+                "name": "Home Assistant Cloud AI"
+            }
+        }
+    },
+    "exceptions": {
+        "auto_login_failed_cloud_error": {
+            "message": "Kunne ikke oprette forbindelse til Home Assistant Cloud for at fuldf\u00f8re dit login. Pr\u00f8v at logge ind igen."
+        },
+        "auto_login_failed_timeout": {
+            "message": "Din email-adresse blev ikke bekr\u00e6ftet i tide, s\u00e5 vi stoppede med at vente. Din konto er oprettet, s\u00e5 bekr\u00e6ft venligst din email-adresse og log ind."
+        },
+        "auto_login_failed_unexpected_error": {
+            "message": "En uventet fejl forhindrede os i at logge dig ind. Pr\u00f8v venligst at logge ind igen."
+        },
+        "backup_size_too_large": {
+            "message": "Sikkerhedskopiens st\u00f8rrelse p\u00e5 {size}GB er for stor til at blive uploadet til Home Assistant Cloud."
+        },
+        "no_pending_auto_login": {
+            "message": "Der er ingen registrering, der venter p\u00e5 en bekr\u00e6ftelse via email."
+        }
+    },
+    "issues": {
+        "connection_error": {
+            "description": "Du har ikke forbindelse til Home Assistant Cloud. Tjek dit netv\u00e6rk.",
+            "title": "Ingen forbindelse"
+        },
+        "deprecated_gender": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "title": "En udfaset stemme blev brugt"
+                    }
+                }
+            },
+            "title": "Tekst-til-tale-funktionen {deprecated_option} er udfaset"
+        },
+        "deprecated_tts_platform_config": {
+            "title": "Konfigurationen af tekst-til-tale-platformen i skyen udfases"
+        },
+        "deprecated_voice": {
+            "fix_flow": {
+                "step": {
+                    "confirm": {
+                        "title": "En udfaset stemme blev brugt"
+                    }
+                }
+            },
+            "title": "En udfaset stemme blev brugt"
+        },
+        "legacy_subscription": {
+            "fix_flow": {
+                "abort": {
+                    "operation_took_too_long": "Operationen tog for lang tid. Pr\u00f8v venligst igen senere."
+                },
+                "step": {
+                    "confirm_change_plan": {
+                        "description": "Vi har for nylig opdateret vores abonnementssystem. For at forts\u00e6tte med at bruge Home Assistant Cloud skal du en gang godkende \u00e6ndringen i PayPal.\n\nDet tager 1 minut og vil ikke \u00f8ge prisen."
+                    }
+                }
+            },
+            "title": "Gammelt abonnement registreret"
+        },
+        "no_subscription": {
+            "description": "Du har ikke et Home Assistant Cloud-abonnement. Abonn\u00e9r p\u00e5 {account_url}.",
+            "title": "Intet abonnement registreret"
+        },
+        "reset_bad_custom_domain_configuration": {
+            "title": "Brugerdefineret dom\u00e6ne ignoreret"
+        },
+        "subscription_expired": {
+            "description": "Dit Home Assistant Cloud-abonnement er udl\u00f8bet. Tilmeld dig igen p\u00e5 {account_url}.",
+            "title": "Abonnement udl\u00f8bet"
+        },
+        "warn_bad_custom_domain_configuration": {
+            "title": "Forkert brugerdefineret dom\u00e6nekonfiguration fundet"
+        }
+    },
+    "preview_features": {
+        "stt_v2": {
+            "description": "Vi tester en ny tale-til-tekst-motor til Home Assistant Cloud \u2013 den del af stemmestyringen, der omdanner det, du siger, til tekst. Vores test viser, at den klarer sig bedre med accenter, baggrundsst\u00f8j og andre sprog end engelsk.\n\nN\u00e5r denne funktion er aktiveret, behandles al lyd fra dine stemmekommandoer af [Soniox](https://soniox.com/) i stedet for vores nuv\u00e6rende udbyder. Dette g\u00e6lder kun for Assistenter, der er konfigureret til at bruge Home Assistant Cloud som STT-motor. Den sendes gennem en Nabu Casa-proxy, som h\u00e5ndterer autentificering og videresender den til den behandlingsregion, der ligger t\u00e6ttest p\u00e5 dig. Nabu Casa behandler, gemmer eller logger p\u00e5 intet tidspunkt din lyd. Alt andet ved din stemmepipeline forbliver u\u00e6ndret, og du kan sl\u00e5 denne funktion fra igen n\u00e5r som helst.",
+            "disable_confirmation": "Enhver assistent, der i \u00f8jeblikket bruger den nye motor, vil igen blive transskriberet af vores nuv\u00e6rende tale-til-tekst-udbyder.",
+            "enable_confirmation": "Denne funktion er stadig under udvikling og kan \u00e6ndre sig. N\u00e5r den er aktiveret, transskriberes lyden fra dine stemmekommandoer p\u00e5 de underst\u00f8ttede sprog af Soniox i stedet for vores nuv\u00e6rende udbyder.",
+            "name": "Ny tale-til-tekst-motor"
+        }
+    },
+    "services": {
+        "remote_connect": {
+            "description": "G\u00f8r instansens brugerflade tilg\u00e6ngelig uden for det lokale netv\u00e6rk ved hj\u00e6lp af Home Assistant Cloud.",
+            "name": "Aktiv\u00e9r Home Assistant Cloud-fjernadgang"
+        },
+        "remote_disconnect": {
+            "description": "Afbryder forbindelsen mellem instansens brugerflade og Home Assistant Cloud. Dette deaktiverer adgangen til den uden for dit lokale netv\u00e6rk.",
+            "name": "Deaktiv\u00e9r fjernadgang til Home Assistant Cloud"
+        }
+    },
+    "system_health": {
+        "info": {
+            "alexa_enabled": "Alexa aktiveret",
+            "can_reach_cert_server": "Tilg\u00e5 certifikatserver",
+            "can_reach_cloud": "Tilg\u00e5 Home Assistant Cloud",
+            "can_reach_cloud_auth": "Tilg\u00e5 godkendelsesserver",
+            "certificate_status": "Certifikatstatus",
+            "google_enabled": "Google aktiveret",
+            "instance_id": "Instans-ID",
+            "logged_in": "Logget ind",
+            "relayer_connected": "Relayer forbundet",
+            "relayer_region": "Relayer-region",
+            "remote_connected": "Fjernadgang forbundet",
+            "remote_enabled": "Fjernadgang aktiveret",
+            "remote_server": "Fjernserver",
+            "subscription_expiration": "Udl\u00f8b af abonnement"
+        }
+    }
+}
