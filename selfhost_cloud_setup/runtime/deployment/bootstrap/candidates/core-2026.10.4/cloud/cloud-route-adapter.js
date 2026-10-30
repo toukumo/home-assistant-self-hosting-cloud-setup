@@ -106,8 +106,18 @@ function adapt(name, update) {
 adapt('cloud-account-overview', overview);
 adapt('ha-config-voice-assistants-assistants', assistants);
 
-// Exact native Japanese copy only; preserve Lit anchors and all controls.
+// Exact native ko/ja/en copy only; preserve Lit anchors and all controls.
 const selfHostedCopy = new Map([
+  ["Nabu Casa 계정", "셀프 호스팅 Cloud 계정"],
+  ["이 페이지에서 원격 접속을 비활성화해도 이 설정을 켜 두면 Nabu Casa 계정을 통해 원격으로 다시 활성화할 수 있습니다.", "이 페이지에서 원격 접속을 비활성화해도 이 설정을 켜 두면 셀프 호스팅 Cloud 계정을 통해 원격으로 다시 활성화할 수 있습니다. 셀프 호스팅 서버의 지원도 필요합니다."],
+  ["암호화된 Home Assistant 백업을 Home Assistant Cloud에 저장할 수 있습니다. 이 기능은 추가 비용 없이 구독에 포함됩니다.", "암호화된 Home Assistant 백업을 셀프 호스팅 Cloud에 저장할 수 있습니다. 저장 위치와 사용 가능한 용량은 서버 설정에 따라 달라집니다."],
+  ["Nabu Casa는 데이터나 암호화 키에 액세스할 수 없습니다.", "백업 복원에 필요한 암호화 키를 안전한 곳에 보관하세요."],
+  ["Home Assistant 앱을 설정하면 자동으로 웹훅을 등록합니다. 클라우드 구독을 사용하면 이것이 Home Assistant Cloud에서 호스팅되는 고유한 비밀 URL인 클라우드훅이 됩니다.", "Home Assistant 앱을 설정하면 웹훅이 자동 등록됩니다. 셀프 호스팅 Cloud에 연결된 경우 이는 셀프 호스팅 Cloud 서버가 제공하는 고유한 비밀 URL인 클라우드훅이 됩니다. 이 URL은 비밀정보로 보관하세요."],
+  ["Nabu Casa account", "Self-hosted Cloud account"],
+  ["If you disable remote access on this page, having this setting enabled allows you to reactivate it remotely via your Nabu Casa account.", "If you disable remote access on this page, this setting allows it to be re-enabled remotely through your self-hosted Cloud account. Your self-hosted server must also support this."],
+  ["You have the option to store an encrypted Home Assistant backup on Home Assistant Cloud. This is included in your subscription at no extra cost.", "You can store encrypted Home Assistant backups on your self-hosted Cloud. Storage location and available capacity depend on your server configuration."],
+  ["Nabu Casa has no access to your data or encryption key.", "Keep the encryption key needed to restore your backups in a safe place."],
+  ["When you set up the Home Assistant app, it registers a webhook automatically. With your cloud subscription that becomes a cloudhook, a unique secret URL hosted on Home Assistant Cloud.", "When you set up the Home Assistant app, it registers a webhook automatically. When connected to your self-hosted Cloud, this becomes a cloudhook: a unique secret URL served by your self-hosted Cloud server. Keep this URL private."],
   ['Nabu Casa アカウント', 'セルフホスティング Cloud アカウント'],
   ['このページでリモート アクセスを無効にした場合、この設定を有効にすると、Nabu Casa アカウントを介してリモートで再アクティブ化できるようになります。', 'この設定は、ローカルで無効にしたリモートアクセスの外部からの再有効化を許可します。セルフホスティングサーバー側の対応も必要です。'],
   ['Home Assistant Cloud に、暗号化された Home Assistant のバックアップを保存するオプションがあります。この機能は、サブスクリプションに含まれており、追加料金はかかりません。', 'セルフホスティング Cloud に、暗号化された Home Assistant のバックアップを保存できます。保存先と利用可能な容量は、サーバーの構成によって異なります。'],
