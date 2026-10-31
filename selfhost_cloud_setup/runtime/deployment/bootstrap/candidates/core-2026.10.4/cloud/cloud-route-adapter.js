@@ -108,6 +108,10 @@ adapt('ha-config-voice-assistants-assistants', assistants);
 
 // Exact native ko/ja/en copy only; preserve Lit anchors and all controls.
 const selfHostedCopy = new Map([
+  ["Home Assistant 개발을 후원하면서 최고의 기능을 이용하세요. 어디서든 집에 안전하게 접속하고, 음성 어시스턴트를 추가하고, 외부 위치에 백업을 보관할 수 있습니다. Home Assistant를 만든 팀에서 직접 제공합니다.", "셀프 호스팅 Cloud의 원격 접속, 백업 및 연결 기능을 관리합니다. 사용 가능한 기능은 서버 설정에 따라 달라집니다."],
+  ["The best of Home Assistant, while funding its development. Securely reach your home from anywhere, add voice assistants, keep an off-site backup, and more. Built by the team behind Home Assistant.", "Manage remote access, backups and connections for your self-hosted Cloud. Available features depend on your server configuration."],
+  ["Home Assistantの優れた機能を最大限に活用しつつ、その開発を支援できます。どこからでも安全に自宅にアクセスしたり、音声アシスタントを追加したり、オフサイトバックアップを作成したりなど、さまざまな機能をご利用いただけます。Home Assistantの開発チームが開発しました。", "セルフホスティング Cloud のリモートアクセス、バックアップ、接続機能を管理します。利用できる機能はサーバーの構成によって異なります。"],
+
   ["Nabu Casa 계정", "셀프 호스팅 Cloud 계정"],
   ["이 페이지에서 원격 접속을 비활성화해도 이 설정을 켜 두면 Nabu Casa 계정을 통해 원격으로 다시 활성화할 수 있습니다.", "이 페이지에서 원격 접속을 비활성화해도 이 설정을 켜 두면 셀프 호스팅 Cloud 계정을 통해 원격으로 다시 활성화할 수 있습니다. 셀프 호스팅 서버의 지원도 필요합니다."],
   ["암호화된 Home Assistant 백업을 Home Assistant Cloud에 저장할 수 있습니다. 이 기능은 추가 비용 없이 구독에 포함됩니다.", "암호화된 Home Assistant 백업을 셀프 호스팅 Cloud에 저장할 수 있습니다. 저장 위치와 사용 가능한 용량은 서버 설정에 따라 달라집니다."],
