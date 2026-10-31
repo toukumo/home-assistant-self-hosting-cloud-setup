@@ -1,4 +1,5 @@
 """Serve the selected-feature UI through the pinned native Cloud menu."""
+import asyncio
 import hashlib
 import os
 import stat
@@ -35,8 +36,29 @@ async def websocket_maintenance_status(hass, connection, msg):
     connection.send_result(msg['id'], result)
 
 
+@websocket_api.require_admin
+@websocket_api.websocket_command({'type': 'cloud/selfhost/voice/status'})
+@websocket_api.async_response
+async def websocket_voice_status(hass, connection, msg):
+    """Read server capabilities without changing voice preferences."""
+    result = {'stt': None, 'tts': None}
+    cloud = hass.data.get('cloud')
+    if cloud is not None and cloud.is_logged_in:
+        try:
+            async with asyncio.timeout(10):
+                services = await cloud.account.services()
+            for name in result:
+                value = services.get(name, {}).get('available')
+                if type(value) is bool:
+                    result[name] = value
+        except Exception:
+            pass  # Unverified capabilities must never be advertised as available.
+    connection.send_result(msg['id'], result)
+
+
 async def async_setup(hass):
     websocket_api.async_register_command(hass, websocket_maintenance_status)
+    websocket_api.async_register_command(hass, websocket_voice_status)
     hass.http.register_view(PasswordRecoveryView)
     frontend.add_extra_js_url(hass, '/selfhost-cloud/password-recovery-ui.js?v=3')
     directory = Path(__file__).parent

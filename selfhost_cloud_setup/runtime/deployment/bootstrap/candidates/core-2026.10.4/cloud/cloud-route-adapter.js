@@ -25,6 +25,7 @@ function overview(host) {
   const root = host.shadowRoot;
   if (!root) return;
   providerCopy(host);
+  voiceAvailability(host);
   if (host.parentNode) style(host.parentNode, 'cloud-account-onboarding { display:none!important; }');
   style(root, `
     /* This card is the official paid-service funding/renewal summary only. */
@@ -142,3 +143,60 @@ function providerCopy(host) {
 for (const name of ['cloud-remote-pref', 'cloud-backup-pref', 'cloud-companion-pref']) {
   adapt(name, providerCopy);
 }
+
+
+const voiceChecks = new WeakMap();
+function voiceAvailability(host) {
+  const hass = host.hass;
+  if (!hass?.callWS || !host.shadowRoot) return;
+  let check = voiceChecks.get(host);
+  if (!check || check.connection !== hass.connection) {
+    check = {connection: hass.connection, result: null};
+    voiceChecks.set(host, check);
+    hass.callWS({type: 'cloud/selfhost/voice/status'}).then(result => {
+      if (voiceChecks.get(host) !== check || host.hass?.connection !== check.connection) return;
+      check.result = result;
+      host.requestUpdate();
+    }).catch(() => {
+      if (voiceChecks.get(host) !== check) return;
+      check.result = {};
+      host.requestUpdate();
+    });
+  }
+  const result = check.result;
+  const language = (hass.locale?.language || hass.language || 'en').split('-')[0];
+  const messages = {
+    en: ['Cloud voice availability has not been verified.', 'Cloud voice is not provided by this server. Configure a separate speech engine in Home Assistant.'],
+    ko: ['Cloud 음성 제공 여부를 확인하지 못했습니다.', '이 서버는 Cloud 음성을 제공하지 않습니다. Home Assistant에서 별도 음성 엔진을 설정하세요.'],
+    ja: ['Cloud 音声の提供状況を確認できません。', 'このサーバーは Cloud 音声を提供していません。Home Assistant で別の音声エンジンを設定してください。'],
+  };
+  const available = result?.tts === true;
+  const message = (messages[language] || messages.en)[result?.tts === false ? 1 : 0];
+  const row = host.shadowRoot.querySelector('ha-list-item-button[href="/config/cloud/voice-assistants"]');
+  if (row) {
+    const partial = {
+      en: ['Cloud speech recognition only', 'Cloud text-to-speech only'],
+      ko: ['Cloud 음성 인식만 제공', 'Cloud 음성 출력만 제공'],
+      ja: ['Cloud 音声認識のみ提供', 'Cloud 音声合成のみ提供'],
+    };
+    let summary = message;
+    if (result?.tts === true && result?.stt === true) {
+      summary = hass.localize?.('ui.panel.config.cloud.account.overview.feature_voice_sub') || ({en: 'Text-to-speech and speech-to-text', ko: '텍스트 음성 변환 및 음성 인식', ja: 'テキスト読み上げと音声認識'}[language] || 'Text-to-speech and speech-to-text');
+    } else if (result?.tts === true || result?.stt === true) {
+      summary = (partial[language] || partial.en)[result.tts === true ? 1 : 0];
+    }
+    text(row.querySelector('[slot="supporting-text"]'), summary);
+  }
+  if (host.localName !== 'cloud-tts-pref') return;
+  let notice = host.shadowRoot.querySelector('[data-selfhost-voice-notice]');
+  if (!notice) {
+    notice = document.createElement('ha-alert');
+    notice.setAttribute('data-selfhost-voice-notice', '');
+    host.shadowRoot.append(notice);
+    style(host.shadowRoot, ':host([data-selfhost-voice-unavailable]) ha-card { display:none!important; } [data-selfhost-voice-notice][hidden] { display:none!important; }');
+  }
+  host.toggleAttribute('data-selfhost-voice-unavailable', result?.tts === false);
+  notice.hidden = available;
+  notice.textContent = message;
+}
+adapt('cloud-tts-pref', voiceAvailability);
