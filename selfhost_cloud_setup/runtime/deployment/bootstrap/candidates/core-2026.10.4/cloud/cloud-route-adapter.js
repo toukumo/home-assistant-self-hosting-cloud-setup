@@ -25,10 +25,10 @@ function overview(host) {
   const root = host.shadowRoot;
   if (!root) return;
   providerCopy(host);
-  voiceAvailability(host);
   if (host.parentNode) style(host.parentNode, 'cloud-account-onboarding { display:none!important; }');
   style(root, `
-    /* This card is the official paid-service funding/renewal summary only. */
+    /* Hide the Cloud voice entry and retired payment UI; retain native routes. */
+    ha-list-item-button[href="/config/cloud/voice-assistants"],
     .summary-card,
     ha-button[href="https://account.nabucasa.com"],
     ha-button[href^="https://account.nabucasa.com/"],
@@ -172,21 +172,6 @@ function voiceAvailability(host) {
   };
   const available = result?.tts === true;
   const message = (messages[language] || messages.en)[result?.tts === false ? 1 : 0];
-  const row = host.shadowRoot.querySelector('ha-list-item-button[href="/config/cloud/voice-assistants"]');
-  if (row) {
-    const partial = {
-      en: ['Cloud speech recognition only', 'Cloud text-to-speech only'],
-      ko: ['Cloud 음성 인식만 제공', 'Cloud 음성 출력만 제공'],
-      ja: ['Cloud 音声認識のみ提供', 'Cloud 音声合成のみ提供'],
-    };
-    let summary = message;
-    if (result?.tts === true && result?.stt === true) {
-      summary = hass.localize?.('ui.panel.config.cloud.account.overview.feature_voice_sub') || ({en: 'Text-to-speech and speech-to-text', ko: '텍스트 음성 변환 및 음성 인식', ja: 'テキスト読み上げと音声認識'}[language] || 'Text-to-speech and speech-to-text');
-    } else if (result?.tts === true || result?.stt === true) {
-      summary = (partial[language] || partial.en)[result.tts === true ? 1 : 0];
-    }
-    text(row.querySelector('[slot="supporting-text"]'), summary);
-  }
   if (host.localName !== 'cloud-tts-pref') return;
   let notice = host.shadowRoot.querySelector('[data-selfhost-voice-notice]');
   if (!notice) {

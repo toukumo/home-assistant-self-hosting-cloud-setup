@@ -20,7 +20,7 @@ from build_haos_bundle import _publish_directory
 # This identifies the exact Core 2026.10.4 candidate; qualification is recorded
 # separately so a source hash never implies a native-runtime test.
 # It is not a general Core compatibility or production-release guarantee.
-KNOWN = {'2026.10.4': '686430c850c6a918b01b948f300d2a9bd10419e3170d2df067a6a6993647b799'}
+KNOWN = {'2026.10.4': '6336dd35376e85f97b6b8f6b372ba1d9a1264b037c521dbe731edd0f9fdd89c7'}
 
 
 def assemble(output, candidate, core_version, api, remote, email, password, voice=None):
